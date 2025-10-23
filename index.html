@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Portfolio di Elisa</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./static/css/index.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="name">
+                    <img src="./assets/images/pfp-s.jpg" alt="Elisa Genesio" class="profile-pic" />
+                    <h1>Elisa Genesio</h1>
+                </div>
+                <nav class="nav">
+                    <a href="./cv.html" class="btn">Il mio CV</a>
+                        <a href="https://github.com/acrazypie" class="btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/matteo-genesio/" class="btn">LinkedIn</a>
+                    <a href="#projects" id="projects-nav-btn" class="btn">Progetti</a>
+                    
+                </nav>
+            </header>
+
+            <div class="card-container">
+                <section id="about" class="card">
+                    <h2>Qualcosa su di me</h2>
+                    <p>
+                        Nella mia ricerca di me stessa ho trovato molti interessi. Tutti portano alla voglia di creare.
+                        I Lego da bambina si sono trasformati nella mia passione per computer e videogiochi.
+                        La mia creatività nella scrittura, che si unisce alla musica e ai computer, mi rende un po' "un tuttofare".
+                        Ma non si smette mai di imparare.
+                        <br><br/>
+                        Ho esperienza nello sviluppo backend e frontend, oltre che nella creazione di videogiochi.
+                        Amo lavorare su progetti che uniscono logica e creatività, e sono sempre pronta ad affrontare nuove sfide.
+                    </p>
+                    <br>
+                    <a href="#contact" class="btn" id="contact-top">Vuoi dirmi qualcosa?</a>
+                </section>
+
+                <section id="skills" class="card">
+                    <h2>Skills Principali</h2>
+                    <div class="skills-container">
+                        <img src="./assets/icons/html5.png" alt="HTML5"/>
+                        <img src="./assets/icons/css3.png" alt="CSS3"/>
+                        <img src="./assets/icons/javascript.png" alt="JavaScript"/>
+                        <img src="./assets/icons/c-sharp.png" alt="CSharp"/>
+                        <img src="./assets/icons/python.png" alt="Python"/>
+                        <img src="./assets/icons/postgresql.png" alt="PostgreSQL"/>
+                        <img src="./assets/icons/unity.png" alt="Unity"/>
+                        <img src="./assets/icons/godot.svg" alt="Godot"/>
+                        <img src="./assets/icons/vs-code.png" alt="VSCode"/>
+                        <img src="./assets/icons/docker.png" alt="Docker"/>
+                        <img src="./assets/icons/git.png" alt="Git"/>
+                    </div>
+                </section>
+            </div>
+
+            <section id="projects" class="card-list">
+                <h2>Progetti</h2>
+
+                <!-- PROJECT CARD: Portfolio Website -->
+                <div id="portfolio-card" class="project-card" style="background-image: url(./assets/images/portfolio-thumb.png); background-size: cover; background-position: center;">
+                    <div class="top">
+                        <div class="thumb"></div>
+                        <div class="meta">
+                            <h3 class="repo-name">Portfolio Website</h3>
+                            <p class="repo-desc">Il sito che stai visitando ora — creato con HTML, CSS e JavaScript!</p>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <span class="lang">—</span>
+                        <span class="stars">★ —</span>
+                        <span class="forks">⑂ —</span>
+                        <span class="updated">Aggiornato —</span>
+                    </div>
+
+                    <div class="tags"></div>
+
+                    <div class="actions">
+                    <a href="https://github.com/acrazypie/portfolio" target="_blank" class="btn repo-link">GitHub</a>
+                    <a href="#" class="btn demo-link disabled">Demo</a>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARD: UFO Activity Tracker -->
+                <div id="attivita_ufo-card" class="project-card" style="background-image: url(./assets/images/attivita_ufo-thumb.png); background-size: cover; background-position: center;">
+                    <div class="top">
+                    <div class="thumb"></div>
+                    <div class="meta">
+                        <h3 class="repo-name">UFO Activity Tracker</h3>
+                        <p class="repo-desc">Un’app web leggera per tracciare le presenze, sviluppata con Flask e SQLAlchemy.</p>
+                    </div>
+                    </div>
+
+                    <div class="stats">
+                    <span class="lang">—</span>
+                    <span class="stars">★ —</span>
+                    <span class="forks">⑂ —</span>
+                    <span class="updated">Aggiornato —</span>
+                    </div>
+
+                    <div class="tags"></div>
+
+                    <div class="actions">
+                    <a href="https://github.com/acrazypie/attivita_ufo" target="_blank" class="btn repo-link">GitHub</a>
+                    <a href="#" class="btn demo-link disabled">Demo</a>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARD: Sudoku App -->
+                <div id="Sudoku-App-card" class="project-card" style="background-image: url(./assets/images/sudoku-thumb.png); background-size: cover; background-position: center;">
+                    <div class="top">
+                        <div class="thumb"></div>
+                        <div class="meta">
+                            <h3 class="repo-name">Sudoku App</h3>
+                            <p class="repo-desc">Un’app per risolvere e generare Sudoku, sviluppata con Python e Tkinter.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <span class="lang">—</span>
+                        <span class="stars">★ —</span>
+                        <span class="forks">⑂ —</span>
+                        <span class="updated">Aggiornato —</span>
+                    </div>
+
+                    <div class="tags"></div>
+
+                    <div class="actions">
+                        <a href="https://github.com/acrazypie/Sudoku-App" target="_blank" class="btn repo-link">GitHub</a>
+                        <a href="#" class="btn demo-link disabled">Releases</a>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARD: E-Commerce Website -->
+                <div id="E-Commerce-card" class="project-card" style="background-image: url(./assets/images/e_commerce-thumb.png); background-size: cover; background-position: center;">
+                    <div class="top">
+                        <div class="thumb"></div>
+                        <div class="meta">
+                            <h3 class="repo-name">E-Commerce Website</h3>
+                            <p class="repo-desc">Un sito web di e-commerce sviluppato con Django e React.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <span class="lang">—</span>
+                        <span class="stars">★ —</span>
+                        <span class="forks">⑂ —</span>
+                        <span class="updated">Aggiornato —</span>
+                    </div>
+
+                    <div class="tags"></div>
+
+                    <div class="actions">
+                        <a href="https://github.com/acrazypie/E-Commerce" target="_blank" class="btn repo-link">GitHub</a>
+                        <a href="#" class="btn demo-link disabled">Demo</a>
+                    </div>
+                </div>
+
+                <!-- PROJECT CARD: AI Prompt API -->
+                <div id="AI-Prompt-API-card" class="project-card" style="background-image: url(./assets/images/ai_prompt_api-thumb.png); background-size: cover; background-position: center;">
+                    <div class="top">
+                        <div class="thumb"></div>
+                        <div class="meta">
+                            <h3 class="repo-name">AI Prompt API</h3>
+                            <p class="repo-desc">Un'API per generare prompt per modelli di linguaggio AI.</p>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <span class="lang">—</span>
+                        <span class="stars">★ —</span>
+                        <span class="forks">⑂ —</span>
+                        <span class="updated">Aggiornato —</span>
+                    </div>
+
+                    <div class="tags"></div>
+
+                    <div class="actions">
+                        <a href="https://github.com/acrazypie/AI-Prompt-API" target="_blank" class="btn repo-link">GitHub</a>
+                        <a href="#" class="btn demo-link disabled">Demo</a>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+            <section id="contact" class="contact">
+                <h2>Contatti</h2>
+                <p>
+                Contattami via email a 
+                <a href="mailto:genesio.elisa0@gmail.com">genesio.elisa0@gmail.com</a>
+                o su Telegram a
+                <a href="https://t.me/acrazypie">acrazypie</a>.
+                </p>
+
+                <div class="links-btn">
+                    <a href="https://linktr.ee/gen3sio" class="btn">Linktree</a>
+                </div>
+                
+            </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Portfolio di Elisa</p>
+        </footer>
+
+        <script src="./static/javascript/scripts.js" async defer></script>
+    </body>
+</html>
