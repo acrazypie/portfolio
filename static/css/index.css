@@ -273,18 +273,6 @@ body {
   margin-top: 1rem;
 }
 
-/* --- FOOTER --- */
-.footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: var(--footer-background);
-  border-top: 1px solid var(--border-color);
-  color: var(--grey-400);
-  bottom: 0;
-  width: 100%;
-  position: relative;
-}
-
 /* --- PROJECT CARD (Reusable) --- */
 .project-card {
   background: var(--black-300);
@@ -357,4 +345,140 @@ body {
   flex: 1;
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* --- FOOTER --- */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+
+  border-top: 1px solid var(--border-color);
+  color: var(--grey-400);
+  bottom: 0;
+  width: 100%;
+  position: relative;
+}
+
+/* === Media Queries === */
+
+/* Smartphone piccoli (max-width 575px) */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 1rem;
+  }
+  header nav {
+    display: none;
+  }
+  .hero {
+    font-size: 1.8rem;
+    padding: 2rem 1rem;
+  }
+  .grid-two-columns {
+    display: block;
+  }
+  .portfolio-item {
+    margin-bottom: 2rem;
+  }
+  .about-section,
+  .skills-section,
+  .contact-section {
+    padding: 1.5rem 1rem;
+  }
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .card-list {
+    width: auto;
+  }
+  .project-card {
+    width: 100%;
+  }
+}
+
+/* Smartphone / piccoli tablet (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero {
+    font-size: 2.2rem;
+  }
+  .grid-two-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .portfolio-item {
+    margin-bottom: 1.8rem;
+  }
+  .card-list {
+    width: auto;
+  }
+  .project-card {
+    width: 100%;
+  }
+}
+
+/* Tablet medi (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    padding: 0 2rem;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .hero {
+    font-size: 2.6rem;
+    padding: 3rem 2rem;
+  }
+  .grid-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .portfolio-item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Desktop (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .hero {
+    font-size: 3rem;
+  }
+  .grid-three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .about-section,
+  .skills-section {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Large desktop (1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .hero {
+    font-size: 3.5rem;
+    padding: 4rem 2rem;
+  }
+  .grid-three-columns {
+    gap: 3rem;
+  }
 }
