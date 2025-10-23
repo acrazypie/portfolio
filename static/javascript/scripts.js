@@ -38,8 +38,8 @@ async function populateProjectCard({ owner, repo, thumb, demo, token } = {}) {
       "Aggiornato " + new Date(data.updated_at).toLocaleDateString();
 
     // Immagine og: miglior thumbnail
-    const ogImage = `https://opengraph.githubassets.com/1/${owner}/${repo}`;
-    thumbEl.style.backgroundImage = `url(${ogImage})`;
+    //const ogImage = `https://opengraph.githubassets.com/1/${owner}/${repo}`;
+    //card.style.backgroundImage = `url(${ogImage})`;
 
     // Topics (tags)
     if (Array.isArray(data.topics) && data.topics.length > 0) {
@@ -54,7 +54,7 @@ async function populateProjectCard({ owner, repo, thumb, demo, token } = {}) {
     }
   } catch (err) {
     console.error("Errore nel caricamento del repo:", err);
-    nameEl.textContent = `${owner}/${repo}`;
+    nameEl.textContent = `${repo}`;
     descEl.textContent = "Impossibile caricare i dati del repository.";
   }
 }
