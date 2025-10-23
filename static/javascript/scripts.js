@@ -30,6 +30,7 @@ async function populateProjectCard({ owner, repo, thumb, demo, token } = {}) {
     const data = await res.json();
 
     nameEl.textContent = data.full_name;
+    nameEl.textContent = nameEl.textContent.replace(`${owner}/`, "");
     descEl.textContent = data.description || descEl.textContent;
     langEl.textContent = data.language || "—";
     starsEl.textContent = `★ ${data.stargazers_count}`;
