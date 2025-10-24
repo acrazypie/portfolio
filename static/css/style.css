@@ -1,0 +1,229 @@
+@font-face {
+    font-family: "Outfit Medium";
+    src: url("/assets/fonts/Outfit-Medium.ttf") format("truetype");
+    font-size: 2em;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Outfit Regular";
+    src: url("/assets/fonts/Outfit-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "NCL Blessing Gloomy";
+    src: url("/assets/fonts/NCLBlessingGloomy.otf") format("opentype");
+    font-weight: 600;
+}
+
+:root {
+    --white: #f0f0f0;
+    --black: #000000;
+
+    --black-100: #111111;
+    --black-200: #191919;
+    --black-bg: #0d100e;
+
+    --grey-bg: #212a26;
+    --grey: #29332b;
+    --grey-50: #2e332f;
+    --grey-100: #333333;
+    --grey-200: #444444;
+    --grey-300: #555555;
+    --grey-400: #666666;
+
+    --violet-pastel: #b19cd9;
+    --violet-50: #e6d8f0;
+    --violet-100: #8a2be2;
+    --violet-200: #7a1be2;
+    --violet-300: #6a0be2;
+
+    --accent-100: #10a134;
+    --accent-200: #27c24e;
+    --accent-300: #00f53d;
+
+    --green-100: #32a850;
+    --green-200: #398f4f;
+    --green-300: #3b7549;
+    --green-400: #375c40;
+    --green-500: #2e4233;
+
+    --font-medium: "Outfit Medium", sans-serif;
+    --font-regular: "Outfit Regular", sans-serif;
+    --font-special: "NCL Blessing Gloomy", sans-serif;
+
+    --text-color: var(--white);
+}
+
+/* --- RESET & GLOBAL STYLES --- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    font-family: var(--font-regular);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--black-bg);
+}
+
+/* --- BUTTONS --- */
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--green-100);
+    font-family: var(--font-medium);
+    font-weight: 500;
+}
+
+button:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --- HEADER --- */
+header {
+    padding: 20px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.theme-toggle {
+    padding: 0.5rem 0.5rem;
+    color: var(--white);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.theme-toggle:disabled {
+    opacity: 0.5;
+}
+.theme-toggle.selected {
+    background-color: var(--green-300);
+    border-radius: 5px;
+}
+
+/* --- CONTAINER --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.name {
+    font-size: 5rem;
+    text-align: center;
+    color: var(--white);
+}
+.name h1 {
+    font-family: "NCL Blessing Gloomy", sans-serif;
+}
+
+/* --- LINKS --- */
+.btns {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    color: var(--green-100);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.btn:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --- FOOTER --- */
+footer {
+    color: var(--green-400);
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    height: auto;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+    color: var(--green-400);
+}
+.links svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--grey-200);
+}
+.links a:hover svg {
+    fill: var(--white);
+    transition: fill 0.3s ease;
+    scale: 110%;
+}
+
+/* --- LIGHT THEME --- */
+body.light-theme {
+    --text-color: #263025;
+    --black-bg: #f0f0f0;
+    --green-100: #2e7d32;
+    --green-200: #388e3c;
+    --green-300: #43a047;
+    --green-400: #66bb6a;
+    --grey-200: #aaaaaa;
+    --white: #ffffff;
+}
+body.light-theme {
+    background-color: var(--black-bg);
+    color: var(--text-color);
+}
+
+body.light-theme .btn {
+    color: var(--green-300);
+}
+
+body.light-theme .links svg {
+    fill: var(--green-300);
+}
+
+body.light-theme .theme-toggle {
+    color: var(--grey-200);
+}
+body.light-theme .name h1 {
+    color: var(--text-color);
+}
+
+/* --- MEDIA QUERY ---*/
+@media (max-width: 575px) {
+    .name h1 {
+        transform: translateY(-50px);
+    }
+}
