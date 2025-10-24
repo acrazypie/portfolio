@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const darkBtn = document.getElementById("dark-mode");
 
     // Legge il tema salvato (o imposta dark di default)
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    const savedTheme = localStorage.getItem("theme") || "light";
     body.classList.toggle("light-theme", savedTheme === "light");
 
     if (savedTheme === "light") {
