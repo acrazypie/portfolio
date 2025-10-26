@@ -216,9 +216,31 @@ footer,
     transition: background-color 0.4s ease, color 0.4s ease, fill 0.4s ease;
 }
 
+/* --- ABOUT PAGE ---*/
+.header.about {
+    justify-content: space-between;
+}
+
+.name.about {
+    font-size: medium;
+}
+
 /* --- MEDIA QUERY ---*/
 @media (max-width: 575px) {
     .name h1 {
         transform: translateY(-50px);
     }
+}
+
+/* --- VIEW TRANSITIONS ---*/
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.6s;
+}
+
+#name {
+    view-transition-name: title;
 }
