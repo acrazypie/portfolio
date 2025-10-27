@@ -77,14 +77,13 @@ button:hover {
 
 /* --- HEADER --- */
 header {
-    padding: 20px 20px;
     position: sticky;
     top: 0;
     width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
     gap: 0.5rem;
+    justify-content: space-between;
 }
 
 .theme-toggle {
@@ -114,7 +113,7 @@ header {
 }
 
 .name {
-    font-size: 5rem;
+    font-size: 1rem;
     text-align: center;
     color: var(--white);
 }
@@ -130,7 +129,6 @@ header {
 .btns {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -147,96 +145,8 @@ header {
     text-underline-offset: 4px;
 }
 
-/* --- FOOTER --- */
-footer {
-    color: var(--green-200);
-    text-align: center;
-    width: 100%;
-    padding: 1rem 0;
-    height: auto;
-    bottom: 0;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    z-index: 1;
-}
-
-.links {
-    display: flex;
-    gap: 1rem;
-    padding: 0.5rem;
-    justify-content: center;
-    color: var(--green-200);
-}
-.links svg {
-    width: 24px;
-    height: 24px;
-    fill: var(--grey-400);
-}
-.links a:hover svg {
-    fill: var(--white);
-    transition: fill 0.3s ease;
-    scale: 110%;
-}
-
-/* --- LIGHT THEME --- */
-body.light-theme {
-    --text-color: #263025;
-    --black-bg: #f0f0f0;
-    --green-500: #2e7d32;
-    --green-400: #388e3c;
-    --green-300: #43a047;
-    --green-200: #66bb6a;
-    --grey-400: #aaaaaa;
-    --white: #ffffff;
-}
-body.light-theme {
-    background-color: var(--black-bg);
-    color: var(--text-color);
-}
-
-body.light-theme .btn {
-    color: var(--green-300);
-}
-
-body.light-theme .links svg {
-    fill: var(--green-300);
-}
-
-body.light-theme .theme-toggle {
-    color: var(--grey-400);
-}
-body.light-theme .name h1 {
-    color: var(--text-color);
-}
-
-/* --- SMOOTH THEME TRANSITION --- */
-body,
-button,
-a,
-header,
-footer,
-.container,
-.name,
-.btns,
-.links {
-    transition: background-color 0.4s ease, color 0.4s ease, fill 0.4s ease;
-}
-
-/* --- ABOUT PAGE ---*/
-.header.about {
-    justify-content: space-between;
-    padding: 1rem;
-    position: relative;
-}
-
-.name.about {
-    font-size: medium;
-}
-
-.main.about {
+/* --- MAIN ---*/
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,15 +219,106 @@ footer,
     font-size: 1.65em;
 }
 
-.footer.about {
-    position: inherit;
-    bottom: 0;
+/* --- FOOTER --- */
+footer {
+    color: var(--green-200);
+    text-align: center;
+    width: 100%;
+    padding: 1rem 0;
+    height: auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    justify-content: center;
+    color: var(--green-200);
+}
+.links svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--grey-400);
+}
+.links a:hover svg {
+    fill: var(--white);
+    transition: fill 0.3s ease;
+    scale: 110%;
+}
+
+/* --- LIGHT THEME --- */
+body.light-theme {
+    --text-color: #263025;
+    --black-bg: #f0f0f0;
+    --green-500: #2e7d32;
+    --green-400: #388e3c;
+    --green-300: #43a047;
+    --green-200: #66bb6a;
+    --grey-400: #aaaaaa;
+    --white: #ffffff;
+}
+body.light-theme {
+    background-color: var(--black-bg);
+    color: var(--text-color);
+}
+
+body.light-theme .btn {
+    color: var(--green-300);
+}
+
+body.light-theme .links svg {
+    fill: var(--green-300);
+}
+
+body.light-theme .theme-toggle {
+    color: var(--grey-400);
+}
+body.light-theme .name h1 {
+    color: var(--text-color);
+}
+
+/* --- SMOOTH THEME TRANSITION --- */
+body,
+button,
+a,
+header,
+footer,
+.container,
+.name,
+.btns,
+.links {
+    transition: background-color 0.4s ease, color 0.4s ease, fill 0.4s ease;
 }
 
 /* --- MEDIA QUERY ---*/
 @media (max-width: 575px) {
-    .name h1 {
-        transform: translateY(-50px);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .header {
+        position: relative;
+    }
+    .bio {
+        width: auto;
+        height: fit-content;
+        padding: 0;
+        margin: 0;
+        font-size: medium;
+    }
+    .btn {
+        display: none;
+    }
+    .intro {
+        scale: 1;
+        margin: 0;
+        margin-bottom: 2rem;
     }
 }
 
@@ -326,7 +327,6 @@ footer,
     navigation: auto;
     animation-duration: 0.6s;
 }
-
 #logo #name {
     view-transition-name: title;
 }
