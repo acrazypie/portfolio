@@ -13,6 +13,11 @@
     src: url("/assets/fonts/FahimSans-Regular.ttf") format("truetype");
     font-weight: 800;
 }
+@font-face {
+    font-family: "PixelMix Regular";
+    src: url("/assets/fonts/pixelmix.ttf");
+    font-weight: 500;
+}
 
 :root {
     --white: #f0f0f0;
@@ -28,18 +33,22 @@
     --grey-300: #333333;
     --grey-400: #444444;
     --grey-500: #555555;
+    --grez-700: #aaaaaa;
 
     --green-100: #2e4233;
     --green-200: #375c40;
     --green-300: #3b7549;
     --green-400: #398f4f;
     --green-500: #32a850;
+    --green-700: #16db47;
 
     --font-regular: "Outfit Regular", sans-serif;
     --font-special: "NCL Blessing Gloomy", sans-serif;
     --font-bold: "Fahim Sans", sans-serif;
+    --font-pixel: "PixelMix Regular", sans-serif;
 
     --text-color: var(--white);
+    --text-color-black: var(--grey-100);
 }
 
 /* --- RESET & GLOBAL STYLES --- */
@@ -114,12 +123,12 @@ header {
 }
 
 .name {
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     color: var(--white);
 }
 .name h1 {
-    font-family: "NCL Blessing Gloomy", sans-serif;
+    font-family: var(--font-pixel);
 }
 .name a {
     text-decoration: none;
@@ -136,7 +145,7 @@ header {
 }
 
 .btn {
-    color: var(--green-500);
+    color: var(--green-700);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -183,33 +192,23 @@ footer {
 
 /* --- LIGHT THEME --- */
 body.light-theme {
-    --text-color: #263025;
-    --black-bg: #f0f0f0;
-    --green-500: #2e7d32;
-    --green-400: #388e3c;
-    --green-300: #43a047;
-    --green-200: #66bb6a;
-    --grey-400: #aaaaaa;
-    --white: #ffffff;
-}
-body.light-theme {
-    background-color: var(--black-bg);
-    color: var(--text-color);
+    background-color: var(--white);
+    color: var(--text-color-black);
 }
 
 body.light-theme .btn {
-    color: var(--green-300);
+    color: var(--green-500);
 }
 
 body.light-theme .links svg {
-    fill: var(--green-300);
+    fill: var(--green-500);
 }
 
 body.light-theme .theme-toggle {
-    color: var(--grey-400);
+    color: var(--grey-700);
 }
 body.light-theme .name h1 {
-    color: var(--text-color);
+    color: var(--text-color-black);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
@@ -223,95 +222,6 @@ footer,
 .btns,
 .links {
     transition: background-color 0.4s ease, color 0.4s ease, fill 0.4s ease;
-}
-
-/* --- ABOUT PAGE ---*/
-.header.about {
-    justify-content: space-between;
-    padding: 1rem;
-    position: relative;
-}
-
-.name.about {
-    font-size: medium;
-}
-
-.main.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 85vh;
-}
-
-.icons {
-    margin: 2rem;
-}
-
-.intro {
-    display: flex;
-    flex-direction: column;
-    margin: 5rem;
-    align-self: flex-start;
-    scale: 1.5;
-    transform: translateX(50px);
-}
-
-.intro p {
-    margin-top: 0.5rem;
-}
-
-#indie,
-#stile {
-    font-family: var(--font-bold);
-    color: var(--green-300);
-}
-
-.pres {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    gap: 1rem;
-
-    border: var(--black-bg);
-    border-width: 1rem;
-}
-
-.pfp {
-    line-height: 2;
-    text-align: justify;
-    text-justify: auto;
-}
-.pfp img {
-    border: var(--black-bg);
-    border-width: 2px;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-}
-
-.bio {
-    margin: 5rem;
-    width: 1200px;
-    text-align: center;
-    font-family: var(--font-regular);
-    font-size: 1.5em;
-}
-
-.bio p b {
-    font-family: var(--font-bold);
-    color: var(--green-200);
-}
-#smettere {
-    font-family: var(--font-bold);
-    color: var(--green-300);
-    font-size: 1.65em;
-}
-
-.footer.about {
-    position: inherit;
-    bottom: 0;
 }
 
 /* --- MEDIA QUERY ---*/
