@@ -40,7 +40,6 @@
     --green-300: #3b7549;
     --green-400: #398f4f;
     --green-500: #32a850;
-    --green-700: #16db47;
 
     --font-regular: "Outfit Regular", sans-serif;
     --font-special: "NCL Blessing Gloomy", sans-serif;
@@ -48,7 +47,7 @@
     --font-pixel: "PixelMix Regular", sans-serif;
 
     --text-color: var(--white);
-    --text-color-black: var(--grey-100);
+    --text-colo-black: var(--grey-100);
 }
 
 /* --- RESET & GLOBAL STYLES --- */
@@ -86,14 +85,14 @@ button:hover {
 
 /* --- HEADER --- */
 header {
-    padding: 20px 20px;
     position: sticky;
+    padding: 20px 20px;
     top: 0;
     width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
     gap: 0.5rem;
+    justify-content: space-between;
 }
 
 .theme-toggle {
@@ -123,7 +122,7 @@ header {
 }
 
 .name {
-    font-size: 3rem;
+    font-size: 0.7rem;
     text-align: center;
     color: var(--white);
 }
@@ -139,13 +138,12 @@ header {
 .btns {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .btn {
-    color: var(--green-700);
+    color: var(--green-500);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -163,13 +161,11 @@ footer {
     width: 100%;
     padding: 1rem 0;
     height: auto;
-    bottom: 0;
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    z-index: 1;
 }
 
 .links {
@@ -192,23 +188,33 @@ footer {
 
 /* --- LIGHT THEME --- */
 body.light-theme {
-    background-color: var(--white);
-    color: var(--text-color-black);
+    --text-color: #263025;
+    --black-bg: #f0f0f0;
+    --green-500: #2e7d32;
+    --green-400: #388e3c;
+    --green-300: #43a047;
+    --green-200: #66bb6a;
+    --grey-400: #aaaaaa;
+    --white: #ffffff;
+}
+body.light-theme {
+    background-color: var(--black-bg);
+    color: var(--text-color);
 }
 
 body.light-theme .btn {
-    color: var(--green-500);
+    color: var(--green-300);
 }
 
 body.light-theme .links svg {
-    fill: var(--green-500);
+    fill: var(--green-300);
 }
 
 body.light-theme .theme-toggle {
-    color: var(--grey-700);
+    color: var(--grey-400);
 }
 body.light-theme .name h1 {
-    color: var(--text-color-black);
+    color: var(--text-color);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
@@ -226,8 +232,22 @@ footer,
 
 /* --- MEDIA QUERY ---*/
 @media (max-width: 575px) {
-    .name h1 {
-        transform: translateY(-50px);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .header {
+        position: relative;
+    }
+    .btns {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: small;
+    }
+    .name {
+        display: none;
     }
 }
 
@@ -236,7 +256,6 @@ footer,
     navigation: auto;
     animation-duration: 0.6s;
 }
-
 #logo #name {
     view-transition-name: title;
 }

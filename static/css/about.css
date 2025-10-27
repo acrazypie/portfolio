@@ -13,6 +13,11 @@
     src: url("/assets/fonts/FahimSans-Regular.ttf") format("truetype");
     font-weight: 800;
 }
+@font-face {
+    font-family: "PixelMix Regular";
+    src: url("/assets/fonts/pixelmix.ttf");
+    font-weight: 500;
+}
 
 :root {
     --white: #f0f0f0;
@@ -28,6 +33,7 @@
     --grey-300: #333333;
     --grey-400: #444444;
     --grey-500: #555555;
+    --grez-700: #aaaaaa;
 
     --green-100: #2e4233;
     --green-200: #375c40;
@@ -38,8 +44,10 @@
     --font-regular: "Outfit Regular", sans-serif;
     --font-special: "NCL Blessing Gloomy", sans-serif;
     --font-bold: "Fahim Sans", sans-serif;
+    --font-pixel: "PixelMix Regular", sans-serif;
 
     --text-color: var(--white);
+    --text-colo-black: var(--grey-100);
 }
 
 /* --- RESET & GLOBAL STYLES --- */
@@ -78,6 +86,7 @@ button:hover {
 /* --- HEADER --- */
 header {
     position: sticky;
+    padding: 20px 20px;
     top: 0;
     width: 100%;
     display: flex;
@@ -113,12 +122,12 @@ header {
 }
 
 .name {
-    font-size: 1rem;
+    font-size: 0.7rem;
     text-align: center;
     color: var(--white);
 }
 .name h1 {
-    font-family: "NCL Blessing Gloomy", sans-serif;
+    font-family: var(--font-pixel);
 }
 .name a {
     text-decoration: none;
@@ -305,6 +314,12 @@ footer,
     .header {
         position: relative;
     }
+    .btns {
+        font-size: 1rem;
+    }
+    .btn {
+        font-size: small;
+    }
     .bio {
         width: auto;
         height: fit-content;
@@ -312,7 +327,7 @@ footer,
         margin: 0;
         font-size: medium;
     }
-    .btn {
+    .name {
         display: none;
     }
     .intro {
