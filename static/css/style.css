@@ -205,7 +205,7 @@ body.light-theme .links svg {
 }
 
 body.light-theme .theme-toggle {
-    color: var(--grey-700);
+    color: var(--grey-500);
 }
 body.light-theme .name h1 {
     color: var(--text-color-black);
@@ -226,8 +226,8 @@ footer,
 
 /* --- MEDIA QUERY ---*/
 @media (max-width: 575px) {
-    .name h1 {
-        transform: translateY(-50px);
+    .name a h1 {
+        font-size: 4rem;
     }
 }
 
