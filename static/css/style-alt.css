@@ -85,14 +85,14 @@ button:hover {
 
 /* --- HEADER --- */
 header {
-    position: sticky;
     padding: 20px 20px;
+    position: sticky;
     top: 0;
     width: 100%;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: flex-end;
     justify-content: space-between;
+    gap: 0.5rem;
 }
 
 .theme-toggle {
@@ -110,17 +110,6 @@ header {
     border-radius: 5px;
 }
 
-/* --- CONTAINER --- */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-}
-
 .name {
     font-size: 0.7rem;
     text-align: center;
@@ -128,10 +117,10 @@ header {
 }
 .name h1 {
     font-family: var(--font-pixel);
+    color: var(--white);
 }
 .name a {
     text-decoration: none;
-    color: var(--white);
 }
 
 /* --- LINKS --- */
@@ -154,6 +143,71 @@ header {
     text-underline-offset: 4px;
 }
 
+.btn-header {
+    color: var(--green-500);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.btn-header:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* --- MAIN CONSTACTS ---*/
+.main-contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 3rem;
+}
+
+.cnt h2 {
+    font-family: var(--font-pixel);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.altro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 3rem;
+}
+
+.altro h3 {
+    font-family: var(--font-pixel);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.altro div a svg {
+    height: 24px;
+    width: 24px;
+}
+
+.cnt-btn a {
+    color: var(--green-500);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 2rem;
+    text-decoration: none;
+}
+.cnt-btn a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 /* --- FOOTER --- */
 footer {
     color: var(--green-200);
@@ -161,7 +215,9 @@ footer {
     width: 100%;
     padding: 1rem 0;
     height: auto;
-    position: fixed;
+    position: absolute;
+    bottom: 0;
+    justify-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,33 +244,32 @@ footer {
 
 /* --- LIGHT THEME --- */
 body.light-theme {
-    --text-color: #263025;
-    --black-bg: #f0f0f0;
-    --green-500: #2e7d32;
-    --green-400: #388e3c;
-    --green-300: #43a047;
-    --green-200: #66bb6a;
-    --grey-400: #aaaaaa;
-    --white: #ffffff;
+    background-color: var(--white);
+    color: var(--text-color-black);
 }
-body.light-theme {
-    background-color: var(--black-bg);
-    color: var(--text-color);
-}
-
 body.light-theme .btn {
-    color: var(--green-300);
+    color: var(--green-500);
 }
-
 body.light-theme .links svg {
-    fill: var(--green-300);
+    fill: var(--green-500);
 }
-
-body.light-theme .theme-toggle {
-    color: var(--grey-400);
+body.light-theme .theme-toggle.selected {
+    background-color: var(--green-400);
+}
+body.light-theme .theme-toggle.selected svg {
+    color: var(--white);
+}
+body.light-theme .theme-toggle svg {
+    color: var(--grey-500);
 }
 body.light-theme .name h1 {
-    color: var(--text-color);
+    color: var(--text-colo-black);
+}
+body.light-theme h1 {
+    color: var(--text-color-black);
+}
+body.light-theme .btn-fill {
+    color: var(--white);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
@@ -227,7 +282,7 @@ footer,
 .name,
 .btns,
 .links {
-    transition: background-color 0.4s ease, color 0.4s ease, fill 0.4s ease;
+    transition: background-color 0.5s ease, color 0.5s ease, fill 0.5s ease;
 }
 
 /* --- MEDIA QUERY ---*/
@@ -245,9 +300,17 @@ footer,
     }
     .btn {
         font-size: small;
+        align-self: center;
     }
     .name {
-        display: none;
+        font-size: 0.4rem;
+        align-self: center;
+    }
+    .cnt h2 {
+        font-size: 1.9rem;
+    }
+    .altro h3 {
+        font-size: 1.9rem;
     }
 }
 
@@ -256,6 +319,18 @@ footer,
     navigation: auto;
     animation-duration: 0.6s;
 }
-#logo #name {
+#name {
     view-transition-name: title;
+}
+#rights {
+    view-timeline-name: rights;
+}
+#github-ft {
+    view-timeline-name: github-svg;
+}
+#linkedin-ft {
+    view-timeline-name: linkedin-svg;
+}
+#linktree-ft {
+    view-timeline-name: linktree-svg;
 }
