@@ -1,11 +1,15 @@
 {
     "it": {
+        "cont-title": "EG | Contatti",
+        "proj-title": "EG | Progetti",
         "projects": "PROGETTI",
         "contacts": "CONTATTI",
         "cnt-at": "Contattami a:",
         "cnt-on": "Mi trovi anche su:"
     },
     "en": {
+        "cont-title": "EG | Contacts",
+        "proj-title": "EG | Projects",
         "projects": "PROJECTS",
         "contacts": "CONTACTS",
         "cnt-at": "Contact me at:",
