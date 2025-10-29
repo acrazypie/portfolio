@@ -41,6 +41,9 @@
     --green-400: #398f4f;
     --green-500: #32a850;
 
+    --gradient-start: #65ba82;
+    --gradient-end: #6061b4;
+
     --font-regular: "Outfit Regular", sans-serif;
     --font-special: "NCL Blessing Gloomy", sans-serif;
     --font-bold: "Fahim Sans", sans-serif;
@@ -103,11 +106,14 @@ header {
     cursor: pointer;
 }
 .theme-toggle:disabled {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .theme-toggle.selected {
-    background-color: var(--green-300);
+    background-color: var(--green-400);
     border-radius: 5px;
+}
+.theme-toggle.selected svg {
+    color: var(--black-bg);
 }
 
 .name {
@@ -117,7 +123,14 @@ header {
 }
 .name h1 {
     font-family: var(--font-pixel);
-    color: var(--white);
+
+    background: linear-gradient(
+        to right,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
+    );
+    background-clip: text;
+    color: transparent;
 }
 .name a {
     text-decoration: none;
@@ -135,7 +148,7 @@ header {
     color: var(--green-500);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 5vw, 2rem);
     text-decoration: none;
 }
 .btn:hover {
@@ -173,8 +186,16 @@ header {
 
 .cnt h2 {
     font-family: var(--font-pixel);
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, calc(1vw + 1rem), 3rem);
     margin-bottom: 0.5rem;
+
+    background: linear-gradient(
+        to right,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
+    );
+    background-clip: text;
+    color: transparent;
 }
 
 .altro {
@@ -187,8 +208,17 @@ header {
 
 .altro h3 {
     font-family: var(--font-pixel);
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, calc(1vw + 1rem), 3rem);
     margin-bottom: 0.5rem;
+
+    background: linear-gradient(
+        to right,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
+    );
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px var(--black-bg);
 }
 
 .altro div a svg {
@@ -200,7 +230,7 @@ header {
     color: var(--green-500);
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
     text-decoration: none;
 }
 .cnt-btn a:hover {
@@ -263,7 +293,13 @@ body.light-theme .theme-toggle svg {
     color: var(--grey-500);
 }
 body.light-theme .name h1 {
-    color: var(--text-colo-black);
+    background: linear-gradient(
+        to right,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
+    );
+    background-clip: text;
+    color: transparent;
 }
 body.light-theme h1 {
     color: var(--text-color-black);
@@ -295,22 +331,10 @@ footer,
     .header {
         position: relative;
     }
-    .btns {
-        font-size: 1rem;
-    }
+
     .btn {
-        font-size: small;
+        font-size: clamp(1rem, 5vw, 2rem);
         align-self: center;
-    }
-    .name {
-        font-size: 0.4rem;
-        align-self: center;
-    }
-    .cnt h2 {
-        font-size: 1.9rem;
-    }
-    .altro h3 {
-        font-size: 1.9rem;
     }
 }
 
