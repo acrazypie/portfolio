@@ -123,14 +123,7 @@ header {
 }
 .name h1 {
     font-family: var(--font-pixel);
-
-    background: linear-gradient(
-        to right,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: var(--white);
 }
 .name a {
     text-decoration: none;
@@ -188,14 +181,7 @@ header {
     font-family: var(--font-pixel);
     font-size: clamp(1.5rem, calc(1vw + 1rem), 3rem);
     margin-bottom: 0.5rem;
-
-    background: linear-gradient(
-        to right,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: var(--white);
 }
 
 .altro {
@@ -210,15 +196,7 @@ header {
     font-family: var(--font-pixel);
     font-size: clamp(1.5rem, calc(1vw + 1rem), 3rem);
     margin-bottom: 0.5rem;
-
-    background: linear-gradient(
-        to right,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-    background-clip: text;
-    color: transparent;
-    text-shadow: 2px var(--black-bg);
+    color: var(--white);
 }
 
 .altro div a svg {
@@ -295,19 +273,19 @@ body.light-theme .theme-toggle svg {
     color: var(--grey-500);
 }
 body.light-theme .name h1 {
-    background: linear-gradient(
-        to right,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: var(--black-bg);
 }
 body.light-theme h1 {
     color: var(--text-color-black);
 }
 body.light-theme .btn-fill {
     color: var(--white);
+}
+body.light-theme .cnt h2 {
+    color: var(--text-color-black);
+}
+body.light-theme .altro h3 {
+    color: var(--text-color-black);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */

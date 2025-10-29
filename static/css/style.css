@@ -141,14 +141,7 @@ header {
 }
 .name h1 {
     font-family: var(--font-pixel);
-
-    background: linear-gradient(
-        to right,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: var(--white);
 }
 .name a {
     text-decoration: none;
@@ -215,15 +208,12 @@ body.light-theme {
     background-color: var(--white);
     color: var(--text-color-black);
 }
-
 body.light-theme .btn {
     color: var(--green-500);
 }
-
 body.light-theme .links svg {
     fill: var(--green-500);
 }
-
 body.light-theme .theme-toggle {
     color: var(--grey-500);
 }
@@ -231,13 +221,7 @@ body.light-theme .theme-toggle.selected svg {
     color: var(--white);
 }
 body.light-theme .name h1 {
-    background: linear-gradient(
-        to right,
-        var(--gradient-start) 0%,
-        var(--gradient-end) 100%
-    );
-    background-clip: text;
-    color: transparent;
+    color: var(--black-bg);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
