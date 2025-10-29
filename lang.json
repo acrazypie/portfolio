@@ -1,0 +1,14 @@
+{
+    "it": {
+        "projects": "PROGETTI",
+        "contacts": "CONTATTI",
+        "cnt-at": "Contattami a:",
+        "cnt-on": "Mi trovi anche su:"
+    },
+    "en": {
+        "projects": "PROJECTS",
+        "contacts": "CONTACTS",
+        "cnt-at": "Contact me at:",
+        "cnt-on": "Find me on:"
+    }
+}

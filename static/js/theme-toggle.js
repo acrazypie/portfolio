@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const body = document.body;
     const lightBtn = document.getElementById("light-mode");
     const darkBtn = document.getElementById("dark-mode");

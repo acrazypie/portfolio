@@ -42,6 +42,9 @@
     --green-500: #32a850;
     --green-700: #16db47;
 
+    --gradient-start: #65ba82;
+    --gradient-end: #6061b4;
+
     --font-regular: "Outfit Regular", sans-serif;
     --font-special: "NCL Blessing Gloomy", sans-serif;
     --font-bold: "Fahim Sans", sans-serif;
@@ -67,6 +70,8 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: var(--black-bg);
+    box-sizing: border-box;
+    height: 100dvh;
 }
 
 /* --- BUTTONS --- */
@@ -104,9 +109,16 @@ header {
     cursor: pointer;
 }
 .theme-toggle:disabled {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .theme-toggle.selected {
+    background-color: var(--green-400);
+    border-radius: 5px;
+}
+.theme-toggle.selected svg {
+    color: var(--black-bg);
+}
+#lang-toggle:active {
     background-color: var(--green-300);
     border-radius: 5px;
 }
@@ -129,6 +141,14 @@ header {
 }
 .name h1 {
     font-family: var(--font-pixel);
+
+    background: linear-gradient(
+        to right,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
+    );
+    background-clip: text;
+    color: transparent;
 }
 .name a {
     text-decoration: none;
@@ -207,8 +227,17 @@ body.light-theme .links svg {
 body.light-theme .theme-toggle {
     color: var(--grey-500);
 }
+body.light-theme .theme-toggle.selected svg {
+    color: var(--white);
+}
 body.light-theme .name h1 {
-    color: var(--text-color-black);
+    background: linear-gradient(
+        to right,
+        var(--gradient-start) 0%,
+        var(--gradient-end) 100%
+    );
+    background-clip: text;
+    color: transparent;
 }
 
 /* --- SMOOTH THEME TRANSITION --- */

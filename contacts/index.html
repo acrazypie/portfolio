@@ -2,24 +2,27 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../static/css/style-alt.css" />
-        <script src="../static/javascript/theme-toggle.js" defer></script>
+        <link rel="stylesheet" href="/static/css/style-alt.css" />
+        <script src="/static/js/theme-toggle.js" defer></script>
+        <script src="/static/js/lang.js"></script>
         <link
             rel="icon"
             type="image/png"
-            href="../assets/icons/portfolio-icon.png" />
-        <title>Contact | Elisa Genesio</title>
+            href="/assets/icons/portfolio-icon.png" />
+        <title>EG | contacts</title>
     </head>
     <body>
         <!-- HEADER -->
         <header class="header">
             <div class="name" id="logo">
-                <a href="../index.html">
-                    <h1 id="name">Elisa Genesio</h1>
+                <a href="/">
+                    <h1 id="name">EG</h1>
                 </a>
             </div>
             <div class="btns">
-                <a href="../projects/" class="btn-header">PROJECTS</a>
+                <a data-i18n="projects" href="/projects/" class="btn-header"
+                    >PROJECTS</a
+                >
             </div>
             <div>
                 <button class="theme-toggle selected" id="light-mode">
@@ -52,7 +55,7 @@
         <!-- MAIN -->
         <main class="main-contacts">
             <div class="cnt">
-                <h2>Contattami a:</h2>
+                <h2 data-i18n="cnt-at">Contattami a:</h2>
                 <div class="cnt-btn">
                     <a href="mailto:genesio.elisa0@gmail.com"
                         >genesio.elisa0@gmail.com</a
@@ -69,7 +72,7 @@
                 </div>
             </div>
             <div class="altro">
-                <h3>Mi trovi anche su:</h3>
+                <h3 data-i18n="cnt-on">Mi trovi anche su:</h3>
                 <div class="cnt-btn">
                     <a
                         href="https://github.com/acrazypie"
