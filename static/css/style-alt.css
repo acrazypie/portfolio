@@ -69,6 +69,7 @@ body {
     padding: 0;
     color: var(--text-color);
     background-color: var(--black-bg);
+    height: 100dvh;
 }
 
 /* --- BUTTONS --- */
@@ -221,8 +222,8 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100dvw;
-    height: calc(100dvh - 72px - 72px);
+    width: 100%;
+    height: calc(100dvh - 75.5px - 76px);
 }
 .cards-proj {
     display: flex;
@@ -233,6 +234,7 @@ header {
 .proj-card {
     padding: 1rem;
     border-left: 3px solid var(--green-400);
+    margin-left: 5rem;
 }
 .proj-card h2 {
     font-family: var(--font-pixel);
@@ -267,10 +269,6 @@ header {
 }
 .proj-card a svg {
     justify-self: center;
-}
-footer.footer-proj {
-    position: relative;
-    bottom: 0;
 }
 
 /* --- FOOTER --- */
@@ -369,16 +367,22 @@ footer,
     .header {
         position: relative;
     }
-
+    .main-projects {
+        height: auto;
+    }
     .btn {
         font-size: clamp(1rem, 5vw, 2rem);
         align-self: center;
     }
-    .main-projects {
-        height: auto;
+    .proj-card {
+        margin-left: 0;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
     }
 }
-@media (min-width: 576px) and (max-width: 1024px) {
+@media (min-width: 576px) and (max-width: 2560px) {
     header {
         padding: 1.5rem;
         gap: 1rem;
