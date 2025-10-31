@@ -222,6 +222,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100dvw;
+    height: calc(100dvh - 72px - 72px);
 }
 .cards-proj {
     display: flex;
@@ -268,6 +269,7 @@ header {
 }
 .footer-proj {
     position: relative;
+    bottom: 0;
 }
 
 /* --- FOOTER --- */
@@ -370,6 +372,9 @@ footer,
     .btn {
         font-size: clamp(1rem, 5vw, 2rem);
         align-self: center;
+    }
+    .main-projects {
+        height: auto;
     }
 }
 
