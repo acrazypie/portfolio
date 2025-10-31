@@ -167,7 +167,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: calc(100dvh - 68px - 80px);
 }
 
 .cnt {
@@ -234,7 +234,7 @@ header {
 .proj-card {
     padding: 1rem;
     border-left: 3px solid var(--green-400);
-    margin-left: 5rem;
+    transform: translateX(10dvw);
 }
 .proj-card h2 {
     font-family: var(--font-pixel);
@@ -409,14 +409,13 @@ footer,
     .cards-proj {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .proj-card {
         width: 45%;
         padding: 1rem;
     }
     .main-contacts {
-        height: auto;
         padding: 2rem 1rem;
     }
     .cnt h2,
