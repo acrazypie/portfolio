@@ -8,5 +8,7 @@
     "sudoku-desc": "py-sudoku パッケージと tkinter を使用して作成した数独ゲーム",
     "ufo-desc": "UFO Saronno の活動における出席を管理します",
     "ai-desc": "AIプロンプトを共有、検索、投票するためのREST API",
-    "ecommerce-desc": "Flask と Google ログインを使用した eコマースの例"
+    "ecommerce-desc": "Flask と Google ログインを使用した eコマースの例",
+    "colorgame-desc": "JavaScriptで作成した小さなゲーム",
+    "invaders-desc": "PythonとPygameを学ぶためのスペースインベーダークローン"
 }
