@@ -97,7 +97,7 @@ header {
     width: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 0.5rem;
 }
 
@@ -118,9 +118,57 @@ header {
 .theme-toggle.selected svg {
     color: var(--black-bg);
 }
-#lang-toggle:active {
-    background-color: var(--green-300);
-    border-radius: 5px;
+
+/* --- Language Menu --- */
+#lang-menu {
+    position: absolute;
+    top: 3rem;
+    left: 1rem;
+    list-style: none;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+#lang-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    animation: popIn 0.25s ease forwards;
+}
+#lang-menu.hidden {
+    animation: popIn 0.25s ease backwards;
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+#lang-menu li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: background 0.2s ease;
+}
+
+.lang-btn #lang-menu li:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
 }
 
 /* --- CONTAINER --- */
@@ -222,6 +270,9 @@ body.light-theme .theme-toggle.selected svg {
 }
 body.light-theme .name h1 {
     color: var(--black-bg);
+}
+body.light-theme #lang-menu li {
+    color: var(--text-color-black);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */

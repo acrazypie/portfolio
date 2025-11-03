@@ -1,0 +1,12 @@
+{
+    "cont-title": "EG | Contacts",
+    "proj-title": "EG | Projets",
+    "projects": "PROJETS",
+    "contacts": "CONTACTS",
+    "cnt-at": "Contactez-moi à :",
+    "cnt-on": "Retrouvez-moi aussi sur :",
+    "sudoku-desc": "Jeu de Sudoku, réalisé avec le paquet py-sudoku et tkinter",
+    "ufo-desc": "Gère la présence des personnes pour les activités d'UFO Saronno",
+    "ai-desc": "Une API REST pour partager, rechercher et voter des prompts IA",
+    "ecommerce-desc": "Exemple d'e-commerce avec Flask et connexion Google"
+}

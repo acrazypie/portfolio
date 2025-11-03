@@ -1,29 +1,65 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const langBtn = document.getElementById("lang-toggle");
+document.addEventListener("DOMContentLoaded", () => {
+    const langToggle = document.getElementById("lang-toggle");
+    const langMenu = document.getElementById("lang-menu");
 
-    let savedLang =
+    if (!langToggle || !langMenu) return;
+
+    // --- Toggle dropdown ---
+    langToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        langMenu.classList.toggle("show");
+    });
+
+    // --- Close when clicking outside ---
+    document.addEventListener("click", (e) => {
+        if (!langMenu.contains(e.target) && !langToggle.contains(e.target)) {
+            langMenu.classList.remove("show");
+        }
+    });
+
+    // --- Handle language click ---
+    langMenu.querySelectorAll("li").forEach((item) => {
+        item.addEventListener("click", () => {
+            const lang = item.dataset.lang;
+            setLanguage(lang);
+            langMenu.classList.remove("show");
+        });
+    });
+
+    // --- Apply saved language on load ---
+    const savedLang =
         localStorage.getItem("lang") ||
         navigator.language.split("-")[0] ||
         "it";
-    const response = await fetch("/lang.json");
-    const translations = await response.json();
-
-    const updateTexts = (lang) => {
-        document.querySelectorAll("[data-i18n]").forEach((el) => {
-            const key = el.dataset.i18n;
-            if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
-            }
-        });
-    };
-
-    updateTexts(savedLang);
-
-    if (langBtn) {
-        langBtn.addEventListener("click", () => {
-            savedLang = savedLang === "it" ? "en" : "it";
-            localStorage.setItem("lang", savedLang);
-            updateTexts(savedLang);
-        });
-    }
+    setLanguage(savedLang);
 });
+
+// --- Set language globally ---
+async function setLanguage(lang) {
+    localStorage.setItem("lang", lang);
+    document.documentElement.setAttribute("lang", lang);
+
+    try {
+        const response = await fetch(`/lang/${lang}.json`);
+        if (!response.ok) throw new Error(`Missing ${lang}.json`);
+        const translations = await response.json();
+        applyTranslations(translations);
+        console.log(`✅ Language set to ${lang}`);
+    } catch (error) {
+        console.error("❌ Translation load failed:", error);
+    }
+}
+
+// --- Apply text to all elements with [data-i18n] ---
+function applyTranslations(translations) {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[key]) {
+            if (el.placeholder !== undefined && el.tagName === "INPUT") {
+                el.placeholder = translations[key];
+            } else {
+                el.textContent = translations[key];
+            }
+        }
+    });
+}

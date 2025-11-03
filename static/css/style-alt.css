@@ -234,7 +234,6 @@ header {
 .proj-card {
     padding: 1rem;
     border-left: 3px solid var(--green-400);
-    transform: translateX(10dvw);
 }
 .proj-card h2 {
     font-family: var(--font-pixel);
@@ -414,6 +413,7 @@ footer,
     .proj-card {
         width: 45%;
         padding: 1rem;
+        transform: translateX(10dvw);
     }
     .main-contacts {
         padding: 2rem 1rem;
