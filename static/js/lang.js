@@ -2,6 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const langToggle = document.getElementById("lang-toggle");
     const langMenu = document.getElementById("lang-menu");
 
+    // --- Apply saved language on load ---
+    const savedLang =
+        localStorage.getItem("lang") ||
+        navigator.language.split("-")[0] ||
+        "it";
+    setLanguage(savedLang);
+
     if (!langToggle || !langMenu) return;
 
     // --- Toggle dropdown ---
@@ -25,13 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
             langMenu.classList.remove("show");
         });
     });
-
-    // --- Apply saved language on load ---
-    const savedLang =
-        localStorage.getItem("lang") ||
-        navigator.language.split("-")[0] ||
-        "it";
-    setLanguage(savedLang);
 });
 
 // --- Set language globally ---

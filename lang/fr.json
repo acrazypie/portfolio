@@ -8,5 +8,7 @@
     "sudoku-desc": "Jeu de Sudoku, réalisé avec le paquet py-sudoku et tkinter",
     "ufo-desc": "Gère la présence des personnes pour les activités d'UFO Saronno",
     "ai-desc": "Une API REST pour partager, rechercher et voter des prompts IA",
-    "ecommerce-desc": "Exemple d'e-commerce avec Flask et connexion Google"
+    "ecommerce-desc": "Exemple d'e-commerce avec Flask et connexion Google",
+    "colorgame-desc": "Un petit jeu réalisé en JavaScript",
+    "invaders-desc": "Un clone de Space Invaders pour apprendre Python et Pygame"
 }

@@ -269,6 +269,9 @@ header {
 .proj-card a svg {
     justify-self: center;
 }
+#play-here {
+    color: var(--black-bg);
+}
 
 /* --- FOOTER --- */
 footer {
@@ -341,6 +344,9 @@ body.light-theme .altro h3 {
 }
 body.light-theme .tags div {
     color: var(--white);
+}
+body.light-theme #play-here {
+    color: var(--text-color-black);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
