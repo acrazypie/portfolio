@@ -1,0 +1,12 @@
+{
+    "cont-title": "EG | 連絡先",
+    "proj-title": "EG | プロジェクト",
+    "projects": "プロジェクト",
+    "contacts": "連絡先",
+    "cnt-at": "こちらにご連絡ください:",
+    "cnt-on": "こちらでも見つけられます:",
+    "sudoku-desc": "py-sudoku パッケージと tkinter を使用して作成した数独ゲーム",
+    "ufo-desc": "UFO Saronno の活動における出席を管理します",
+    "ai-desc": "AIプロンプトを共有、検索、投票するためのREST API",
+    "ecommerce-desc": "Flask と Google ログインを使用した eコマースの例"
+}
