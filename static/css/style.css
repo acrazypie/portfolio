@@ -22,28 +22,16 @@
 :root {
     --white: #f0f0f0;
 
-    --black-100: #111111;
-    --black-200: #191919;
-
     --black-bg: #0d100e;
-    --grey-bg: #212a26;
 
     --grey-100: #29332b;
-    --grey-200: #2e332f;
-    --grey-300: #333333;
     --grey-400: #444444;
     --grey-500: #555555;
-    --grez-700: #aaaaaa;
 
-    --green-100: #2e4233;
     --green-200: #375c40;
-    --green-300: #3b7549;
     --green-400: #398f4f;
     --green-500: #32a850;
     --green-700: #16db47;
-
-    --gradient-start: #65ba82;
-    --gradient-end: #6061b4;
 
     --font-regular: "Outfit Regular", sans-serif;
     --font-special: "NCL Blessing Gloomy", sans-serif;
@@ -167,8 +155,8 @@ header {
 }
 
 .lang-btn #lang-menu li:hover {
-    text-decoration: underline;
-    text-underline-offset: 0.4rem;
+    color: var(--black-bg);
+    background-color: var(--green-500);
 }
 
 /* --- CONTAINER --- */
