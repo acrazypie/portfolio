@@ -236,8 +236,34 @@ header {
     border-left: 3px solid var(--green-400);
 }
 .proj-card h2 {
+    display: flex;
     font-family: var(--font-pixel);
     line-height: calc(16px + 1.25rem);
+}
+.btn-fill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    aspect-ratio: 1 / 1;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+    border-radius: 10px;
+    background-color: var(--green-300);
+}
+.btn-fill a {
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 60%;
+}
+.btn-fill a svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--black-bg);
+}
+.btn-fill:hover {
+    background-color: var(--gradient-start);
 }
 .tags {
     display: flex;
@@ -347,6 +373,9 @@ body.light-theme .tags div {
 }
 body.light-theme #play-here {
     color: var(--text-color-black);
+}
+body.light-theme .btn-fill a svg {
+    fill: var(--white);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
