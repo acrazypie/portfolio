@@ -34,8 +34,14 @@ function initializeTheme() {
 
 function updateThemeIcon(theme) {
     const themeToggle = document.getElementById("theme-toggle");
-    themeToggle.querySelector(".theme-toggle-icon").textContent =
-        theme === "dark" ? "🌙" : "☀️";
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+    const icon = theme === "dark" ? "🌙" : "☀️";
+    if (themeToggle) {
+        themeToggle.querySelector(".theme-toggle-icon").textContent = icon;
+    }
+    if (themeToggleMobile) {
+        themeToggleMobile.querySelector(".theme-toggle-icon").textContent = icon;
+    }
 }
 
 function toggleTheme() {
@@ -48,7 +54,47 @@ function toggleTheme() {
 }
 
 document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+document
+    .getElementById("theme-toggle-mobile")
+    ?.addEventListener("click", toggleTheme);
 initializeTheme();
+
+function initializeMobileLang() {
+    const langToggleMobile = document.getElementById("lang-toggle-mobile");
+    const langMenuMobile = document.getElementById("lang-menu-mobile");
+    if (!langToggleMobile || !langMenuMobile) return;
+
+    const currentLang = localStorage.getItem("lang") || "en";
+    langToggleMobile.querySelector(".lang-current").textContent =
+        currentLang.toUpperCase();
+
+    langToggleMobile.addEventListener("click", (e) => {
+        e.stopPropagation();
+        langMenuMobile.classList.toggle("show");
+    });
+
+    document.addEventListener("click", (e) => {
+        if (
+            !langMenuMobile.contains(e.target) &&
+            !langToggleMobile.contains(e.target)
+        ) {
+            langMenuMobile.classList.remove("show");
+        }
+    });
+
+    langMenuMobile.querySelectorAll("li").forEach((item) => {
+        item.addEventListener("click", () => {
+            const lang = item.dataset.lang;
+            localStorage.setItem("lang", lang);
+            langToggleMobile.querySelector(".lang-current").textContent =
+                lang.toUpperCase();
+            applyLanguage(lang);
+            langMenuMobile.classList.remove("show");
+            closeDrawer();
+        });
+    });
+}
+initializeMobileLang();
 
 /* ─── SMOOTH SCROLL ──────────────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach((a) => {

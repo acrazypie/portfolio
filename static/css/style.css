@@ -163,6 +163,55 @@ a {
     border-bottom: none;
 }
 
+/* mobile theme toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+/* mobile language selector */
+#lang-toggle-mobile {
+    background: none;
+    border: 1px solid var(--line);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+}
+
+#lang-menu-mobile {
+    list-style: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    display: none;
+}
+
+#lang-menu-mobile.show {
+    display: block;
+}
+
+#lang-menu-mobile li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--mid);
+    transition: color 0.2s;
+}
+
+#lang-menu-mobile li:hover {
+    color: var(--white);
+}
+
 /* desktop links (hidden on mobile) */
 .nav__links {
     display: none;
