@@ -1,14 +1,30 @@
 {
-    "cont-title": "EG | 連絡先",
-    "proj-title": "EG | プロジェクト",
-    "projects": "プロジェクト",
-    "contacts": "連絡先",
-    "cnt-at": "こちらにご連絡ください:",
-    "cnt-on": "こちらでも見つけられます:",
-    "sudoku-desc": "py-sudoku パッケージと tkinter を使用して作成した数独ゲーム",
-    "ufo-desc": "UFO Saronno の活動における出席を管理します",
-    "ai-desc": "AIプロンプトを共有、検索、投票するためのREST API",
-    "ecommerce-desc": "Flask と Google ログインを使用した eコマースの例",
-    "colorgame-desc": "JavaScriptで作成した小さなゲーム",
-    "invaders-desc": "PythonとPygameを学ぶためのスペースインベーダークローン"
+    "nav.about": "について",
+    "nav.projects": "プロジェクト",
+    "nav.contact": "連絡先",
+    "nav.cv": "cv",
+
+    "hero.tag": "開発者 · イタリア · 2026",
+    "hero.desc": "小さなものの作成者。<br>常に好奇心旺盛で、常にカフェイン摂取。",
+    "hero.cta_projects": "プロジェクト",
+    "hero.cta_github": "github",
+    "hero.cta_cv": "cv",
+    "hero.scroll": "スクロール",
+
+    "about.title": "01 // について",
+    "about.bio_p1": "ウサギの穴を深く掘り下げる傾向のある開発者。私は<strong>学ぶ</strong>ために物を構築します — そして、まず物を壊することで学びます。",
+    "about.bio_p2": "Python、Web開発、そしてコンピュータに<strong>興味深い</strong>ことをさせるあらゆることに情熱を持っています。ステガノグラフィツールからREST APIまで、各プロジェクトは新しいテクノロジーを探索する言い訳です。",
+
+    "projects.title": "02 // プロジェクト",
+
+    "contact.title": "03 // 連絡先",
+    "contact.heading": "一緒に<br><em>話しましょう。</em>",
+    "contact.description": "プロジェクト、質問がありますか、それとも単にこんにちは言いたいですか？普通は噛みません。",
+    "contact.github": "GitHub",
+    "contact.linkedin": "LinkedIn",
+    "contact.cv": "履歴書",
+    "contact.cv_action": "PDFをダウンロード",
+
+    "footer.credit": "Elisa Genesio · egenesio.com",
+    "footer.copyright": "© 2026 · すべての著作権を保有"
 }

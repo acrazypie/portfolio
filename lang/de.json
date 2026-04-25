@@ -1,14 +1,30 @@
 {
-    "cont-title": "EG | Kontakte",
-    "proj-title": "EG | Projekte",
-    "projects": "PROJEKTE",
-    "contacts": "KONTAKTE",
-    "cnt-at": "Kontaktiere mich unter:",
-    "cnt-on": "Du findest mich auch auf:",
-    "sudoku-desc": "Sudoku-Spiel, erstellt mit dem py-sudoku-Paket und tkinter",
-    "ufo-desc": "Verwaltet die Anwesenheit von Personen bei den Aktivitäten von UFO Saronno",
-    "ai-desc": "Eine REST-API zum Teilen, Durchsuchen und Bewerten von KI-Prompts",
-    "ecommerce-desc": "Beispiel eines E-Commerce mit Flask und Google-Login",
-    "colorgame-desc": "Ein kleines Spiel, das mit JavaScript erstellt wurde",
-    "invaders-desc": "Ein Space-Invaders-Klon zum Lernen von Python und Pygame"
+    "nav.about": "über",
+    "nav.projects": "projekte",
+    "nav.contact": "kontakt",
+    "nav.cv": "cv",
+
+    "hero.tag": "entwickler · italien · 2026",
+    "hero.desc": "Erbauer kleiner Dinge.<br>Immer neugierig, immer koffeiniert.",
+    "hero.cta_projects": "projekte",
+    "hero.cta_github": "github",
+    "hero.cta_cv": "cv",
+    "hero.scroll": "scrollen",
+
+    "about.title": "01 // über",
+    "about.bio_p1": "Entwickler mit einer Neigung, in tiefe Kaninchenlöcher zu graben. Ich baue Dinge zum <strong>Lernen</strong> — und ich lerne, indem ich zuerst Dinge kaputtmache.",
+    "about.bio_p2": "Leidenschaftlich interessiert an Python, Webentwicklung und allem, das einem Computer etwas <strong>Interessantes</strong> zu tun bringt. Von Steganographie-Tools bis zu REST-APIs ist jedes Projekt eine Entschuldigung, eine neue Technologie zu erkunden.",
+
+    "projects.title": "02 // projekte",
+
+    "contact.title": "03 // kontakt",
+    "contact.heading": "Lass uns<br><em>reden.</em>",
+    "contact.description": "Hast du ein Projekt, eine Frage oder möchtest einfach nur hallo sagen? Ich beiße nicht (normalerweise).",
+    "contact.github": "GitHub",
+    "contact.linkedin": "LinkedIn",
+    "contact.cv": "Lebenslauf",
+    "contact.cv_action": "PDF herunterladen",
+
+    "footer.credit": "Elisa Genesio · egenesio.com",
+    "footer.copyright": "© 2026 · alle Rechte vorbehalten"
 }

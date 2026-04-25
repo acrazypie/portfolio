@@ -1,14 +1,30 @@
 {
-    "cont-title": "EG | Contacts",
-    "proj-title": "EG | Projects",
-    "projects": "PROJECTS",
-    "contacts": "CONTACTS",
-    "cnt-at": "Contact me at:",
-    "cnt-on": "Find me on:",
-    "sudoku-desc": "Sudoku game, made using the py-sudoku package and tkinter",
-    "ufo-desc": "Manages the presence of people for the activities at UFO Saronno",
-    "ai-desc": "A REST API for sharing, browsing, and upvoting AI prompts",
-    "ecommerce-desc": "Example of an e-commerce with Flask and Google login",
-    "colorgame-desc": "A small game made using JavaScript",
-    "invaders-desc": "Just a Space Invaders clone to learn python and pygame"
+    "nav.about": "about",
+    "nav.projects": "projects",
+    "nav.contact": "contact",
+    "nav.cv": "cv",
+
+    "hero.tag": "developer · italy · 2026",
+    "hero.desc": "Builder of small things.<br>Always curious, always caffeinated.",
+    "hero.cta_projects": "projects",
+    "hero.cta_github": "github",
+    "hero.cta_cv": "cv",
+    "hero.scroll": "scroll",
+
+    "about.title": "01 // about",
+    "about.bio_p1": "Developer with a tendency to go deep into rabbit holes. I build things to <strong>learn</strong> — and I learn by breaking things first.",
+    "about.bio_p2": "Passionate about Python, web development, and anything that makes a computer do something <strong>interesting</strong>. From steganography tools to REST APIs, each project is an excuse to explore a new technology.",
+
+    "projects.title": "02 // projects",
+
+    "contact.title": "03 // contact",
+    "contact.heading": "Let's<br><em>talk.</em>",
+    "contact.description": "Got a project, a question, or just want to say hi? I don't bite (usually).",
+    "contact.github": "GitHub",
+    "contact.linkedin": "LinkedIn",
+    "contact.cv": "Curriculum Vitae",
+    "contact.cv_action": "download PDF",
+
+    "footer.credit": "Elisa Genesio · egenesio.com",
+    "footer.copyright": "© 2026 · all rights reserved"
 }
