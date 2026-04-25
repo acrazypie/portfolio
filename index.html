@@ -1,171 +1,393 @@
-<!DOCTYPE html>
-<html lang="it">
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/static/css/style.css" />
-        <script src="/static/js/theme-toggle.js" defer></script>
-        <script src="/static/js/lang.js"></script>
-        <link rel="icon" type="image/png" href="/assets/icons/icon-p.png" />
+        <meta
+            name="description"
+            content="Elisa Genesio — developer, builder of small things." />
         <title>Elisa Genesio</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="static/css/style.css" />
     </head>
     <body>
-        <!-- HEADER -->
-        <header class="header">
-            <div class="lang-btn">
-                <button class="theme-toggle" id="lang-toggle">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-globe2"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
-                    </svg>
-                </button>
-                <ul id="lang-menu" class="hidden">
-                    <li data-lang="en">🇬🇧 English</li>
-                    <li data-lang="it">🇮🇹 Italiano</li>
-                    <li data-lang="fr">🇫🇷 Français</li>
-                    <li data-lang="de">🇩🇪 Deutsch</li>
-                    <li data-lang="es">🇪🇸 Español</li>
-                    <li data-lang="ja">🇯🇵 日本語</li>
-                </ul>
-            </div>
+        <!-- NAV -->
+        <nav class="nav" id="nav">
+            <a href="#" class="nav__logo">eg</a>
+            <button class="nav__burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links">
+                <li><a href="#about" data-i18n="nav.about">about</a></li>
+                <li>
+                    <a href="#projects" data-i18n="nav.projects">projects</a>
+                </li>
+                <li><a href="#contact" data-i18n="nav.contact">contact</a></li>
+                <li>
+                    <a
+                        href="https://drive.google.com/file/d/19mlWueSbtYCa1DLaTMegYcIr_gsviiVr"
+                        target="_blank"
+                        data-i18n="nav.cv"
+                        >cv ↗</a
+                    >
+                </li>
+                <li>
+                    <button
+                        class="theme-toggle"
+                        id="theme-toggle"
+                        aria-label="Toggle theme">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
 
-            <div class="theme-btns">
-                <button class="theme-toggle selected" id="light-mode">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-sun-fill"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
-                    </svg>
-                </button>
-                <button class="theme-toggle" id="dark-mode" disabled>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-moon-fill"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-                    </svg>
-                </button>
-            </div>
-        </header>
-
-        <!-- MAIN CONTENT -->
-        <div class="container">
-            <div class="name" id="logo">
-                <a href="#">
-                    <h1 id="name">Elisa Genesio</h1>
-                </a>
-            </div>
-
-            <div class="btns">
-                <a
-                    href="/projects/"
-                    data-i18n="projects"
-                    id="projects"
-                    class="btn"
-                    >PROJECTS</a
-                >
-                <a
-                    href="/contacts/"
-                    data-i18n="contacts"
-                    id="contacts"
-                    class="btn"
-                    >CONTACTS</a
-                >
-                <a
-                    href="https://drive.google.com/file/d/19mlWueSbtYCa1DLaTMegYcIr_gsviiVr"
-                    id="cv"
-                    class="btn"
-                    >CV</a
-                >
-            </div>
+        <!-- MOBILE DRAWER -->
+        <div class="nav__drawer" id="drawer">
+            <a href="#about" onclick="closeDrawer()" data-i18n="nav.about"
+                >about</a
+            >
+            <a href="#projects" onclick="closeDrawer()" data-i18n="nav.projects"
+                >projects</a
+            >
+            <a href="#contact" onclick="closeDrawer()" data-i18n="nav.contact"
+                >contact</a
+            >
+            <a
+                href="https://drive.google.com/file/d/19mlWueSbtYCa1DLaTMegYcIr_gsviiVr"
+                target="_blank"
+                onclick="closeDrawer()"
+                data-i18n="nav.cv"
+                >cv ↗</a
+            >
         </div>
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="links">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero__tag" data-i18n="hero.tag">
+                developer · italy · 2026
+            </div>
+            <h1 class="hero__name">Elisa<em>Genesio</em></h1>
+            <p class="hero__desc" data-i18n="hero.desc">
+                Builder of small things.<br />Always curious, always
+                caffeinated.
+            </p>
+            <div class="hero__cta">
+                <a href="#projects" class="cta-link"
+                    ><span data-i18n="hero.cta_projects">projects</span>
+                    <span class="icon">↓</span></a
+                >
                 <a
                     href="https://github.com/acrazypie"
                     target="_blank"
-                    id="github-ft">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-github"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                    </svg>
+                    class="cta-link"
+                    ><span data-i18n="hero.cta_github">github</span>
+                    <span class="icon">↗</span></a
+                >
+                <a
+                    href="https://drive.google.com/file/d/19mlWueSbtYCa1DLaTMegYcIr_gsviiVr"
+                    target="_blank"
+                    class="cta-link"
+                    ><span data-i18n="hero.cta_cv">cv</span>
+                    <span class="icon">↗</span></a
+                >
+            </div>
+            <div class="hero__scroll">
+                <div class="scroll-line"></div>
+                <span data-i18n="hero.scroll">scroll</span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="sec-tag r" data-i18n="about.title">01 // about</div>
+            <div class="about__layout">
+                <div class="about__bio r">
+                    <p data-i18n="about.bio_p1">
+                        Developer with a tendency to go deep into rabbit holes.
+                        I build things to <strong>learn</strong> — and I learn
+                        by breaking things first.
+                    </p>
+                    <p data-i18n="about.bio_p2">
+                        Passionate about Python, web development, and anything
+                        that makes a computer do something
+                        <strong>interesting</strong>. From steganography tools
+                        to REST APIs, each project is an excuse to explore a new
+                        technology.
+                    </p>
+                </div>
+                <div class="stack__grid r-group">
+                    <div class="stack__item">
+                        <span class="dot"></span>Python
+                    </div>
+                    <div class="stack__item">
+                        <span class="dot"></span>Flask
+                    </div>
+                    <div class="stack__item">
+                        <span class="dot"></span>JavaScript
+                    </div>
+                    <div class="stack__item">
+                        <span class="dot"></span>Docker
+                    </div>
+                    <div class="stack__item">
+                        <span class="dot"></span>PostgreSQL
+                    </div>
+                    <div class="stack__item">
+                        <span class="dot"></span>Linux
+                    </div>
+                    <div class="stack__item"><span class="dot"></span>Git</div>
+                    <div class="stack__item">
+                        <span class="dot"></span>REST APIs
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="sec-tag r" data-i18n="projects.title">
+                02 // projects
+            </div>
+            <div class="r-group">
+                <a
+                    href="https://github.com/acrazypie/stegano"
+                    target="_blank"
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">001</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">stegano</div>
+                        <div class="project__desc">
+                            Hiding files inside images using LSB steganography.
+                            Encode and decode without visible traces.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Python</span
+                            ><span class="lang">CLI</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
                 </a>
 
                 <a
-                    href="https://www.linkedin.com/in/elisa-genesio"
+                    href="https://github.com/acrazypie/sudoku-flask"
                     target="_blank"
-                    id="linkedin-ft"
-                    ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-linkedin"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                    </svg>
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">002</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">sudoku-flask</div>
+                        <div class="project__desc">
+                            Sudoku, but fancy. Generated puzzles, multiple
+                            difficulty levels, full web interface.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Python</span
+                            ><span class="lang">Flask</span
+                            ><span class="lang">JS</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
                 </a>
 
                 <a
-                    href="https://linktr.ee/gen3sio"
+                    href="https://github.com/acrazypie/AI-Prompt-API"
                     target="_blank"
-                    id="linktree-ft">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-tree-fill"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777z" />
-                    </svg>
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">003</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">AI Prompt API</div>
+                        <div class="project__desc">
+                            REST API for sharing, browsing and upvoting AI
+                            prompts. Full CRUD, built to be extended.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Python</span
+                            ><span class="lang">PostgreSQL</span
+                            ><span class="lang">psycopg2</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
                 </a>
 
                 <a
-                    href="https://ko-fi.com/egenesio"
+                    href="https://github.com/acrazypie/palette_generator"
                     target="_blank"
-                    id="kofi-ft">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-cup-hot-fill"
-                        viewBox="0 0 16 16">
-                        <path
-                            fill-rule="evenodd"
-                            d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5" />
-                        <path
-                            d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 9.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8" />
-                    </svg>
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">004</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">palette generator</div>
+                        <div class="project__desc">
+                            Dynamically generate color palettes. Export, tweak,
+                            get inspired.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Python</span
+                            ><span class="lang">Flask</span
+                            ><span class="lang">CSS</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
+                </a>
+
+                <a
+                    href="https://github.com/acrazypie/color-game"
+                    target="_blank"
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">005</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">color game</div>
+                        <div class="project__desc">
+                            Guess the RGB color from a swatch. Deceptively
+                            tricky, surprisingly addicting.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">JavaScript</span
+                            ><span class="lang">HTML</span
+                            ><span class="lang">CSS</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
+                </a>
+
+                <a
+                    href="https://github.com/acrazypie/attivita_ufo"
+                    target="_blank"
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">006</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">UFO activity</div>
+                        <div class="project__desc">
+                            Manage attendance at UFO Saronno. Real-world utility
+                            for a local association.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Flask</span
+                            ><span class="lang">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
+                </a>
+
+                <a
+                    href="https://github.com/acrazypie/E-Commerce"
+                    target="_blank"
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">007</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">E-Commerce</div>
+                        <div class="project__desc">
+                            E-commerce prototype with Google OAuth2, Flask
+                            backend, product management and order flow.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Flask</span
+                            ><span class="lang">SQLAlchemy</span
+                            ><span class="lang">OAuth2</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
+                </a>
+
+                <a
+                    href="https://github.com/acrazypie/Space_Invaders_Clone"
+                    target="_blank"
+                    class="project">
+                    <div class="project__meta">
+                        <div class="project__num">008</div>
+                    </div>
+                    <div class="project__body">
+                        <div class="project__title">Space Invaders Clone</div>
+                        <div class="project__desc">
+                            Classic arcade clone built to learn Python and
+                            Pygame. Sprites, collisions, lots of bullets.
+                        </div>
+                        <div class="project__langs">
+                            <span class="lang">Python</span
+                            ><span class="lang">Pygame</span>
+                        </div>
+                    </div>
+                    <div class="project__arrow">↗</div>
                 </a>
             </div>
-            <p>All rights reserved.</p>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="sec-tag r" data-i18n="contact.title">03 // contact</div>
+            <div class="contact__layout">
+                <div class="r">
+                    <h2 class="contact__heading" data-i18n="contact.heading">
+                        Let's<br /><em>talk.</em>
+                    </h2>
+                    <p class="contact__sub" data-i18n="contact.description">
+                        Got a project, a question, or just want to say hi? I
+                        don't bite (usually).
+                    </p>
+                </div>
+                <div class="contact__list r">
+                    <a
+                        href="https://github.com/acrazypie"
+                        target="_blank"
+                        class="contact__row">
+                        <span class="contact__label" data-i18n="contact.github"
+                            >GitHub</span
+                        >
+                        <span class="contact__val"
+                            >@acrazypie <span class="arr">↗</span></span
+                        >
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/egenesi0"
+                        target="_blank"
+                        class="contact__row">
+                        <span
+                            class="contact__label"
+                            data-i18n="contact.linkedin"
+                            >LinkedIn</span
+                        >
+                        <span class="contact__val"
+                            >egenesi0 <span class="arr">↗</span></span
+                        >
+                    </a>
+                    <a
+                        href="https://drive.google.com/file/d/19mlWueSbtYCa1DLaTMegYcIr_gsviiVr"
+                        target="_blank"
+                        class="contact__row">
+                        <span class="contact__label" data-i18n="contact.cv"
+                            >Curriculum Vitae</span
+                        >
+                        <span class="contact__val" data-i18n="contact.cv_action"
+                            >download PDF <span class="arr">↗</span></span
+                        >
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <span data-i18n="footer.credit">Elisa Genesio · egenesio.com</span>
+            <span data-i18n="footer.copyright"
+                >© 2025 · all rights reserved</span
+            >
         </footer>
+
+        <script src="static/js/main.js"></script>
+        <script src="static/js/lang.js"></script>
     </body>
 </html>

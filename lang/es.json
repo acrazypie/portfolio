@@ -1,14 +1,30 @@
 {
-    "cont-title": "EG | Contactos",
-    "proj-title": "EG | Proyectos",
-    "projects": "PROYECTOS",
-    "contacts": "CONTACTOS",
-    "cnt-at": "Contáctame en:",
-    "cnt-on": "También me encuentras en:",
-    "sudoku-desc": "Juego de Sudoku hecho con el paquete py-sudoku y tkinter",
-    "ufo-desc": "Gestiona la asistencia de personas para las actividades de UFO Saronno",
-    "ai-desc": "API REST para compartir, buscar y votar prompts de IA",
-    "ecommerce-desc": "Ejemplo de comercio electrónico con Flask y acceso con Google",
-    "colorgame-desc": "Un pequeño juego hecho con JavaScript",
-    "invaders-desc": "Un clon de Space Invaders para aprender Python y Pygame"
+    "nav.about": "sobre",
+    "nav.projects": "proyectos",
+    "nav.contact": "contacto",
+    "nav.cv": "cv",
+
+    "hero.tag": "desarrollador · italia · 2026",
+    "hero.desc": "Constructor de cosas pequeñas.<br>Siempre curioso, siempre cafeinado.",
+    "hero.cta_projects": "proyectos",
+    "hero.cta_github": "github",
+    "hero.cta_cv": "cv",
+    "hero.scroll": "desplazar",
+
+    "about.title": "01 // sobre",
+    "about.bio_p1": "Desarrollador con tendencia a profundizar en madrigueras. Construyo cosas para <strong>aprender</strong> — y aprendo rompiendo cosas primero.",
+    "about.bio_p2": "Apasionado por Python, desarrollo web y cualquier cosa que haga que una computadora haga algo <strong>interesante</strong>. Desde herramientas de esteganografía hasta API REST, cada proyecto es una excusa para explorar una nueva tecnología.",
+
+    "projects.title": "02 // proyectos",
+
+    "contact.title": "03 // contacto",
+    "contact.heading": "Vamos a<br><em>hablar.</em>",
+    "contact.description": "¿Tienes un proyecto, una pregunta o simplemente quieres saludar? No muerdo (generalmente).",
+    "contact.github": "GitHub",
+    "contact.linkedin": "LinkedIn",
+    "contact.cv": "Currículum",
+    "contact.cv_action": "descargar PDF",
+
+    "footer.credit": "Elisa Genesio · egenesio.com",
+    "footer.copyright": "© 2026 · todos los derechos reservados"
 }
