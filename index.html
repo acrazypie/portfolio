@@ -62,20 +62,26 @@
                 data-i18n="nav.cv"
                 >cv ↗</a
             >
-            <button class="theme-toggle" id="theme-toggle-mobile" aria-label="Toggle theme">
-                <span class="theme-toggle-icon">🌙</span>
-            </button>
-            <button class="lang-toggle" id="lang-toggle-mobile" aria-label="Change language">
-                <span class="lang-current">EN</span>
-            </button>
-            <ul class="lang-menu" id="lang-menu-mobile">
-                <li data-lang="it" role="button">🇮🇹 IT</li>
-                <li data-lang="en" role="button">🇬🇧 EN</li>
-                <li data-lang="fr" role="button">🇫🇷 FR</li>
-                <li data-lang="de" role="button">🇩🇪 DE</li>
-                <li data-lang="es" role="button">🇪🇸 ES</li>
-                <li data-lang="ja" role="button">🇯🇵 JA</li>
-            </ul>
+            <div class="drawer-controls">
+                <button class="drawer-theme" id="theme-toggle-mobile" aria-label="Toggle theme">
+                    <span class="drawer-theme-label" data-i18n="nav.theme">theme</span>
+                    <span class="drawer-theme-icon">🌙</span>
+                </button>
+                <div class="drawer-lang">
+                    <button class="drawer-lang-toggle" id="lang-toggle-mobile" aria-label="Change language">
+                        <span class="drawer-lang-label" data-i18n="nav.language">language</span>
+                        <span class="drawer-lang-current">EN</span> <span class="drawer-lang-arrow">▾</span>
+                    </button>
+                    <ul class="drawer-lang-menu" id="lang-menu-mobile">
+                        <li data-lang="it" role="button">🇮🇹 <span>Italiano</span></li>
+                        <li data-lang="en" role="button">🇬🇧 <span>English</span></li>
+                        <li data-lang="fr" role="button">🇫🇷 <span>Français</span></li>
+                        <li data-lang="de" role="button">🇩🇪 <span>Deutsch</span></li>
+                        <li data-lang="es" role="button">🇪🇸 <span>Español</span></li>
+                        <li data-lang="ja" role="button">🇯🇵 <span>日本語</span></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <!-- HERO -->
