@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     applyLanguage(savedLang);
 });
 
+window.applyLanguage = applyLanguage;
+
 function getDefaultLanguage() {
     const browserLang = navigator.language.split("-")[0];
     return LANGUAGES.hasOwnProperty(browserLang) ? browserLang : "en";
