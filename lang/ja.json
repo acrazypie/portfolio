@@ -6,22 +6,22 @@
     "nav.theme": "テーマ",
     "nav.language": "言語",
 
-    "hero.tag": "開発者 · イタリア · 2026",
-    "hero.desc": "小さなものの作成者。<br>常に好奇心旺盛で、常にカフェイン摂取。",
+    "hero.tag": "デベロッパー · イタリア · 2026",
+    "hero.desc": "小さなものを作る人。<br>常に的好奇心旺盛で、常にカフェイン摂取。",
     "hero.cta_projects": "プロジェクト",
     "hero.cta_github": "github",
     "hero.cta_cv": "cv",
     "hero.scroll": "スクロール",
 
     "about.title": "01 // について",
-    "about.bio_p1": "ウサギの穴を深く掘り下げる傾向のある開発者。私は<strong>学ぶ</strong>ために物を構築します — そして、まず物を壊することで学びます。",
+    "about.bio_p1": "ウサギの穴を深く掘り下げる傾向のあるデベロッパー。<strong>学ぶ</strong>ために物を構築します — と、まず物を壊すことで学びます。",
     "about.bio_p2": "Python、Web開発、そしてコンピュータに<strong>興味深い</strong>ことをさせるあらゆることに情熱を持っています。ステガノグラフィツールからREST APIまで、各プロジェクトは新しいテクノロジーを探索する言い訳です。",
 
     "projects.title": "02 // プロジェクト",
 
     "contact.title": "03 // 連絡先",
     "contact.heading": "一緒に<br><em>話しましょう。</em>",
-    "contact.description": "プロジェクト、質問がありますか、それとも単にこんにちは言いたいですか？普通は噛みません。",
+    "contact.description": "プロジェクト、質問がありますか、それとも単にこんにちは言いたいですか？普通はかみません。",
     "contact.github": "GitHub",
     "contact.linkedin": "LinkedIn",
     "contact.cv": "履歴書",

@@ -6,16 +6,16 @@
     "nav.theme": "tema",
     "nav.language": "idioma",
 
-    "hero.tag": "desarrollador · italia · 2026",
-    "hero.desc": "Constructor de cosas pequeñas.<br>Siempre curioso, siempre cafeinado.",
+    "hero.tag": "desarrolladora · italia · 2026",
+    "hero.desc": "Constructora de cosas pequeñas.<br>Siempre curiosa, siempre cafeinada.",
     "hero.cta_projects": "proyectos",
     "hero.cta_github": "github",
     "hero.cta_cv": "cv",
     "hero.scroll": "desplazar",
 
     "about.title": "01 // sobre",
-    "about.bio_p1": "Desarrollador con tendencia a profundizar en madrigueras. Construyo cosas para <strong>aprender</strong> — y aprendo rompiendo cosas primero.",
-    "about.bio_p2": "Apasionado por Python, desarrollo web y cualquier cosa que haga que una computadora haga algo <strong>interesante</strong>. Desde herramientas de esteganografía hasta API REST, cada proyecto es una excusa para explorar una nueva tecnología.",
+    "about.bio_p1": "Desarrolladora con tendencia a profundizar en madrigueras. Construyo cosas para <strong>aprender</strong> — y aprendo rompiendo cosas primero.",
+    "about.bio_p2": "Apasionada por Python, desarrollo web y cualquier cosa que haga que una computadora haga algo <strong>interesante</strong>. Desde herramientas de esteganografía hasta API REST, cada proyecto es una excusa para explorar una nueva tecnología.",
 
     "projects.title": "02 // proyectos",
 
