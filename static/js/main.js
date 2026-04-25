@@ -40,7 +40,7 @@ function updateThemeIcon(theme) {
         themeToggle.querySelector(".theme-toggle-icon").textContent = icon;
     }
     if (themeToggleMobile) {
-        themeToggleMobile.querySelector(".theme-toggle-icon").textContent = icon;
+        themeToggleMobile.querySelector(".drawer-theme-icon").textContent = icon;
     }
 }
 
@@ -53,19 +53,14 @@ function toggleTheme() {
     updateThemeIcon(newTheme);
 }
 
-document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
-document
-    .getElementById("theme-toggle-mobile")
-    ?.addEventListener("click", toggleTheme);
-initializeTheme();
-
+/* ─── MOBILE LANGUAGE SELECTOR ─────────────────────────────── */
 function initializeMobileLang() {
     const langToggleMobile = document.getElementById("lang-toggle-mobile");
     const langMenuMobile = document.getElementById("lang-menu-mobile");
     if (!langToggleMobile || !langMenuMobile) return;
 
     const currentLang = localStorage.getItem("lang") || "en";
-    langToggleMobile.querySelector(".lang-current").textContent =
+    langToggleMobile.querySelector(".drawer-lang-current").textContent =
         currentLang.toUpperCase();
 
     langToggleMobile.addEventListener("click", (e) => {
@@ -86,15 +81,46 @@ function initializeMobileLang() {
         item.addEventListener("click", () => {
             const lang = item.dataset.lang;
             localStorage.setItem("lang", lang);
-            langToggleMobile.querySelector(".lang-current").textContent =
+            langToggleMobile.querySelector(".drawer-lang-current").textContent =
                 lang.toUpperCase();
-            applyLanguage(lang);
+            if (window.applyLanguage) {
+                window.applyLanguage(lang);
+            } else if (typeof applyLanguage === "function") {
+                applyLanguage(lang);
+            } else {
+                document.documentElement.setAttribute("lang", lang);
+                fetch(`lang/${lang}.json`)
+                    .then((r) => r.json())
+                    .then((t) => {
+                        document
+                            .querySelectorAll("[data-i18n]")
+                            .forEach((el) => {
+                                const key = el.getAttribute("data-i18n");
+                                if (t[key]) el.innerHTML = t[key];
+                            });
+                    });
+            }
             langMenuMobile.classList.remove("show");
             closeDrawer();
         });
     });
 }
-initializeMobileLang();
+
+/* ─── INITIALIZE ──────────────────────────────────────── */
+document.addEventListener("DOMContentLoaded", () => {
+    initializeTheme();
+
+    const themeToggleDesktop = document.getElementById("theme-toggle");
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+    if (themeToggleDesktop) {
+        themeToggleDesktop.addEventListener("click", toggleTheme);
+    }
+    if (themeToggleMobile) {
+        themeToggleMobile.addEventListener("click", toggleTheme);
+    }
+
+    initializeMobileLang();
+});
 
 /* ─── SMOOTH SCROLL ──────────────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach((a) => {

@@ -3,6 +3,8 @@
     "nav.projects": "projects",
     "nav.contact": "contact",
     "nav.cv": "cv",
+    "nav.theme": "theme",
+    "nav.language": "language",
 
     "hero.tag": "developer · italy · 2026",
     "hero.desc": "Builder of small things.<br>Always curious, always caffeinated.",

@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply saved language on load
     const savedLang = localStorage.getItem("lang") || getDefaultLanguage();
     applyLanguage(savedLang);
-});
 
-window.applyLanguage = applyLanguage;
+    window.applyLanguage = applyLanguage;
+});
 
 function getDefaultLanguage() {
     const browserLang = navigator.language.split("-")[0];
@@ -82,8 +82,15 @@ function initializeLanguageSelector() {
 
 function updateLanguageDisplay(lang) {
     const toggle = document.getElementById("lang-toggle");
+    const toggleMobile = document.getElementById("lang-toggle-mobile");
     if (toggle) {
         toggle.querySelector(".lang-current").textContent = lang.toUpperCase();
+    }
+    if (toggleMobile) {
+        const currentEl = toggleMobile.querySelector(".drawer-lang-current");
+        if (currentEl) {
+            currentEl.textContent = lang.toUpperCase();
+        }
     }
 }
 
