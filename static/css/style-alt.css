@@ -260,7 +260,7 @@ header {
 .btn-fill a svg {
     width: 100%;
     height: 100%;
-    fill: var(--black-bg);
+    fill: var(--white);
 }
 .btn-fill:hover {
     background-color: var(--gradient-start);
@@ -273,8 +273,8 @@ header {
 }
 .tags div {
     padding: 0.6rem;
-    color: var(--black-bg);
-    background-color: var(--green-300);
+    color: var(--white);
+    background-color: var(--green-400);
     border-radius: 20px;
 }
 .p-link {
@@ -296,12 +296,12 @@ header {
     justify-self: center;
 }
 #play-here {
-    color: var(--black-bg);
+    color: var(--white);
 }
 
 /* --- FOOTER --- */
 footer {
-    color: var(--green-200);
+    color: var(--grey-500);
     text-align: center;
     width: 100%;
     padding: 1rem 0;
@@ -320,12 +320,12 @@ footer {
     gap: 1rem;
     padding: 0.5rem;
     justify-content: center;
-    color: var(--green-200);
+    color: var(--grey-500);
 }
 .links svg {
     width: 24px;
     height: 24px;
-    fill: var(--grey-400);
+    fill: var(--grey-500);
 }
 .links a:hover svg {
     fill: var(--white);
@@ -340,9 +340,6 @@ body.light-theme {
 }
 body.light-theme .btn {
     color: var(--green-500);
-}
-body.light-theme .links svg {
-    fill: var(--green-500);
 }
 body.light-theme .theme-toggle.selected {
     background-color: var(--green-400);
@@ -372,10 +369,22 @@ body.light-theme .tags div {
     color: var(--white);
 }
 body.light-theme #play-here {
-    color: var(--text-color-black);
+    color: var(--white);
 }
 body.light-theme .btn-fill a svg {
     fill: var(--white);
+}
+body.light-theme footer {
+    color: var(--grey-500);
+}
+body.light-theme .links {
+    color: var(--grey-500);
+}
+body.light-theme .links svg {
+    fill: var(--grey-500);
+}
+body.light-theme .links a:hover svg {
+    fill: var(--black-bg);
 }
 
 /* --- SMOOTH THEME TRANSITION --- */
