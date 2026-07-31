@@ -1,0 +1,89 @@
+{
+  "owner": "acrazypie",
+  "generated_at": "2026-07-31T11:48:00.072Z",
+  "source": "github-profile-scrape",
+  "repos": [
+    {
+      "name": "stegano",
+      "full_name": "acrazypie/stegano",
+      "description": "A Python tool for hiding files in images using LSB steganography.",
+      "language": "Python",
+      "homepage": "",
+      "url": "https://github.com/acrazypie/stegano",
+      "topics": [
+        "cli",
+        "encryption-decryption",
+        "python",
+        "stenography"
+      ],
+      "stars": 1
+    },
+    {
+      "name": "sudoku-flask",
+      "full_name": "acrazypie/sudoku-flask",
+      "description": "sudoku, but fancy!",
+      "language": "Python",
+      "homepage": "",
+      "url": "https://github.com/acrazypie/sudoku-flask",
+      "topics": [
+        "fancy",
+        "sudoku"
+      ],
+      "stars": 0
+    },
+    {
+      "name": "color-game",
+      "full_name": "acrazypie/color-game",
+      "description": "A fun and simple javascript game",
+      "language": "HTML",
+      "homepage": "https://colorgame.egenesio.com/",
+      "url": "https://github.com/acrazypie/color-game",
+      "topics": [
+        "game",
+        "html-css-javascript",
+        "web"
+      ],
+      "stars": 0
+    },
+    {
+      "name": "slate",
+      "full_name": "acrazypie/slate",
+      "description": "Pianificatore a blocchi orari per studenti, universitari e giovani lavoratori.",
+      "language": "TypeScript",
+      "homepage": "https://slate-theta-drab.vercel.app",
+      "url": "https://github.com/acrazypie/slate",
+      "topics": [],
+      "stars": 0
+    },
+    {
+      "name": "portfolio",
+      "full_name": "acrazypie/portfolio",
+      "description": "My site/portfolio. Take a look!",
+      "language": "HTML",
+      "homepage": "https://egenesio.com/",
+      "url": "https://github.com/acrazypie/portfolio",
+      "topics": [
+        "css3",
+        "html5",
+        "javascript"
+      ],
+      "stars": 0
+    },
+    {
+      "name": "sudoku.js",
+      "full_name": "acrazypie/sudoku.js",
+      "description": "A Sudoku puzzle generator and solver JavaScript library.",
+      "language": "JavaScript",
+      "homepage": "https://npmjs.com/package/@acrazypie/sudoku.js",
+      "url": "https://github.com/acrazypie/sudoku.js",
+      "topics": [
+        "javascript",
+        "library",
+        "sudoku",
+        "sudoku-generator",
+        "sudoku-solver"
+      ],
+      "stars": 0
+    }
+  ]
+}

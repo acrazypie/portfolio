@@ -10,7 +10,7 @@
     "hero.desc": "Constructora de cosas pequeñas.<br>Siempre curiosa, siempre cafeinada.",
     "hero.cta_projects": "proyectos",
     "hero.cta_github": "github",
-    "hero.cta_cv": "cv",
+    "hero.cta_cv": "descargar cv",
     "hero.scroll": "desplazar",
 
     "about.title": "01 // sobre",
@@ -19,6 +19,10 @@
 
     "projects.title": "02 // proyectos",
 
+    "proj-title": "EG | Proyectos",
+    "projects.heading": "Proyectos<br><em>seleccionados.</em>",
+    "projects.sub": "Repositorios fijados, directamente de GitHub.",
+
     "contact.title": "03 // contacto",
     "contact.heading": "Vamos a<br><em>hablar.</em>",
     "contact.description": "¿Tienes un proyecto, una pregunta o simplemente quieres saludar? No muerdo (generalmente).",
@@ -26,6 +30,12 @@
     "contact.linkedin": "LinkedIn",
     "contact.cv": "Currículum",
     "contact.cv_action": "descargar PDF",
+
+    "cont-title": "EG | Contacto",
+    "contacts.heading": "Contacta<br><em>conmigo.</em>",
+    "contacts.sub": "Contactos directos y perfiles sociales.",
+    "cnt-at": "Contáctame en:",
+    "cnt-on": "También me encuentras en:",
 
     "footer.credit": "Elisa Genesio · egenesio.com",
     "footer.copyright": "© 2026 · todos los derechos reservados"

@@ -98,7 +98,7 @@ function updateLanguageDisplay(lang) {
 function applyLanguage(lang) {
     document.documentElement.setAttribute("lang", lang);
 
-    fetch(`lang/${lang}.json`)
+    fetch(`/lang/${lang}.json`)
         .then((response) => {
             if (!response.ok) throw new Error(`Missing ${lang}.json`);
             return response.json();

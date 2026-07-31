@@ -89,7 +89,7 @@ function initializeMobileLang() {
                 applyLanguage(lang);
             } else {
                 document.documentElement.setAttribute("lang", lang);
-                fetch(`lang/${lang}.json`)
+                fetch(`/lang/${lang}.json`)
                     .then((r) => r.json())
                     .then((t) => {
                         document
