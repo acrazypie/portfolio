@@ -1,0 +1,150 @@
+/* ─── CONTACTS PAGE ────────────────────────────────────────
+ * Builds on style.css (same tokens, same design language).
+ */
+
+.contacts-page {
+    padding: calc(56px + 4rem) 1.5rem 5rem;
+    min-height: calc(100svh - 120px);
+}
+
+.contacts__head {
+    margin-bottom: 3rem;
+}
+
+.contacts__head .sec-tag {
+    margin-bottom: 1rem;
+}
+
+.contacts__title {
+    font-family: var(--syne);
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--white);
+}
+
+.contacts__title em {
+    font-style: normal;
+    color: var(--green);
+}
+
+.contacts__sub {
+    font-size: 0.8rem;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 420px;
+    margin-top: 1rem;
+}
+
+/* groups */
+.contacts__group {
+    margin-bottom: 3rem;
+}
+
+.contacts__group-title {
+    font-family: var(--syne);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1.2rem;
+}
+
+/* grid of glass cards */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* glass card */
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:
+        border-color 0.3s,
+        background 0.3s,
+        transform 0.3s var(--ease),
+        box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    border-color: var(--line-hi);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.contact-card__label {
+    font-size: 0.6rem;
+    color: var(--dim);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.contact-card__value {
+    font-family: var(--syne);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    word-break: break-word;
+    transition: color 0.2s;
+}
+
+.contact-card:hover .contact-card__value {
+    color: var(--green);
+}
+
+.contact-card__arrow {
+    color: var(--dim);
+    display: inline-block;
+    transition:
+        color 0.2s,
+        transform 0.25s var(--ease);
+}
+
+.contact-card:hover .contact-card__arrow {
+    color: var(--green);
+    transform: translate(2px, -2px);
+}
+
+/* light theme overrides */
+[data-theme="light"] .contact-card {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .contact-card:hover {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── TABLET / DESKTOP ──────────────────────────────────── */
+@media (min-width: 768px) {
+    .contacts-page {
+        padding: calc(56px + 6rem) 3rem 7rem;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contacts-page {
+        padding: calc(56px + 7rem) 5rem 8rem;
+    }
+}

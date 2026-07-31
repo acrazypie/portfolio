@@ -10,7 +10,7 @@
     "hero.desc": "小さなものを作る人。<br>常に的好奇心旺盛で、常にカフェイン摂取。",
     "hero.cta_projects": "プロジェクト",
     "hero.cta_github": "github",
-    "hero.cta_cv": "cv",
+    "hero.cta_cv": "履歴書をダウンロード",
     "hero.scroll": "スクロール",
 
     "about.title": "01 // について",
@@ -19,6 +19,10 @@
 
     "projects.title": "02 // プロジェクト",
 
+    "proj-title": "EG | プロジェクト",
+    "projects.heading": "選りすぐりの<br><em>プロジェクト。</em>",
+    "projects.sub": "GitHubから取得したピン留めリポジトリ。",
+
     "contact.title": "03 // 連絡先",
     "contact.heading": "一緒に<br><em>話しましょう。</em>",
     "contact.description": "プロジェクト、質問がありますか、それとも単にこんにちは言いたいですか？普通はかみません。",
@@ -26,6 +30,12 @@
     "contact.linkedin": "LinkedIn",
     "contact.cv": "履歴書",
     "contact.cv_action": "PDFをダウンロード",
+
+    "cont-title": "EG | 連絡先",
+    "contacts.heading": "連絡先<br><em>コンタクト。</em>",
+    "contacts.sub": "ダイレクト連絡先とソーシャルプロフィール。",
+    "cnt-at": "連絡先:",
+    "cnt-on": "SNSもどうぞ:",
 
     "footer.credit": "Elisa Genesio · egenesio.com",
     "footer.copyright": "© 2026 · すべての著作権を保有"

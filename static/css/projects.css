@@ -1,0 +1,217 @@
+/* ─── PROJECTS PAGE ────────────────────────────────────────
+ * Builds on style.css (same tokens, same design language).
+ */
+
+.projects-page {
+    padding: calc(56px + 4rem) 1.5rem 5rem;
+    min-height: calc(100svh - 120px);
+}
+
+.projects__head {
+    margin-bottom: 3rem;
+}
+
+.projects__head .sec-tag {
+    margin-bottom: 1rem;
+}
+
+.projects__title {
+    font-family: var(--syne);
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--white);
+}
+
+.projects__title em {
+    font-style: normal;
+    color: var(--green);
+}
+
+.projects__sub {
+    font-size: 0.8rem;
+    color: var(--mid);
+    line-height: 1.8;
+    max-width: 420px;
+    margin-top: 1rem;
+}
+
+/* grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* glass card */
+.proj-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:
+        border-color 0.3s,
+        background 0.3s,
+        transform 0.3s var(--ease),
+        box-shadow 0.3s;
+}
+
+.proj-card:hover {
+    border-color: var(--line-hi);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.proj-card__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.proj-card__name {
+    font-family: var(--syne);
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    transition: color 0.2s;
+}
+
+.proj-card:hover .proj-card__name {
+    color: var(--green);
+}
+
+.proj-card__arrow {
+    font-size: 0.9rem;
+    color: var(--dim);
+    transition:
+        color 0.2s,
+        transform 0.25s var(--ease);
+    flex-shrink: 0;
+}
+
+.proj-card:hover .proj-card__arrow {
+    color: var(--green);
+    transform: translate(3px, -3px);
+}
+
+.proj-card__desc {
+    font-size: 0.78rem;
+    color: var(--mid);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.proj-card__langs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.proj-card__langs .lang {
+    color: var(--green-lo);
+    border-color: rgba(74, 222, 128, 0.15);
+}
+
+.proj-card__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--line);
+}
+
+.proj-card__repo {
+    font-size: 0.6rem;
+    color: var(--dim);
+    letter-spacing: 0.07em;
+}
+
+.proj-card__live {
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--green);
+    transition: color 0.2s;
+}
+
+.proj-card__live:hover {
+    color: var(--white);
+}
+
+/* status / error */
+.projects-status {
+    font-size: 0.75rem;
+    color: var(--mid);
+    letter-spacing: 0.08em;
+}
+
+.projects-retry {
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: var(--syne);
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition:
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.projects-retry:hover {
+    color: var(--green);
+    border-color: var(--line-hi);
+}
+
+/* light theme overrides */
+[data-theme="light"] .proj-card {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .proj-card:hover {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .proj-card__langs .lang {
+    border-color: rgba(45, 157, 79, 0.25);
+}
+
+/* ─── TABLET / DESKTOP ──────────────────────────────────── */
+@media (min-width: 768px) {
+    .projects-page {
+        padding: calc(56px + 6rem) 3rem 7rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+
+    .proj-card {
+        padding: 1.6rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects-page {
+        padding: calc(56px + 7rem) 5rem 8rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
