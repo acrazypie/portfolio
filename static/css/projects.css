@@ -187,7 +187,8 @@
 }
 
 [data-theme="light"] .proj-card__langs .lang {
-    border-color: rgba(45, 157, 79, 0.25);
+    color: #2d7a45;
+    border-color: rgba(45, 157, 79, 0.4);
 }
 
 /* ─── TABLET / DESKTOP ──────────────────────────────────── */
