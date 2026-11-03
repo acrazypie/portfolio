@@ -53,7 +53,6 @@
       name: r.name || "",
       description: (r.description || "").trim(),
       language: r.language || "",
-      homepage: "",
       url: r.url || `https://github.com/${GITHUB_OWNER}/${r.name}`,
     }));
   }
@@ -85,16 +84,27 @@
   }
 
   function cardFor(repo) {
-    const card = el("a", "proj-card");
-    card.href = repo.url;
-    card.target = "_blank";
-    card.rel = "noopener noreferrer";
+    const card = el("article", "proj-card");
+    const repoLink = el("a", "proj-card__repo-link");
+    repoLink.href = repo.url;
+    repoLink.target = "_blank";
+    repoLink.rel = "noopener noreferrer";
+    repoLink.setAttribute("aria-label", `View ${repo.name} on GitHub`);
 
     const head = el("div", "proj-card__head");
-    head.append(
-      el("span", "proj-card__name", repo.name),
-      el("span", "proj-card__arrow", "↗"),
-    );
+    const name = el("span", "proj-card__name", repo.name);
+    const actions = el("span", "proj-card__actions");
+    actions.appendChild(el("span", "proj-card__arrow", "↗"));
+    if (repo.homepage) {
+      const website = el("a", "proj-card__play", "▶");
+      website.href = repo.homepage;
+      website.target = "_blank";
+      website.rel = "noopener noreferrer";
+      website.title = `Visit ${repo.name} website`;
+      website.setAttribute("aria-label", `Visit ${repo.name} website`);
+      actions.appendChild(website);
+    }
+    head.append(name, actions);
 
     const desc = el("p", "proj-card__desc", repo.description || "—");
 
@@ -105,15 +115,8 @@
     foot.appendChild(
       el("span", "proj-card__repo", `github.com/${GITHUB_OWNER}/${repo.name}`),
     );
-    if (repo.homepage) {
-      const live = el("a", "proj-card__live", "live ↗");
-      live.href = repo.homepage;
-      live.target = "_blank";
-      live.rel = "noopener noreferrer";
-      foot.appendChild(live);
-    }
 
-    card.append(head, desc, langs, foot);
+    card.append(repoLink, head, desc, langs, foot);
     return card;
   }
 
