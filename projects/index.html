@@ -1,122 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Elisa Genesio — projects." />
-        <title data-i18n="proj-title">EG | Projects</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="/static/css/style.css" />
-        <link rel="stylesheet" href="/static/css/projects.css" />
-        <link rel="icon" type="image/png" href="/assets/icons/icon-p.png" />
+        <meta http-equiv="refresh" content="0;url=/#projects" />
+        <title>EG | Projects</title>
+        <script>
+            window.location.replace("/#projects");
+        </script>
     </head>
     <body>
-        <!-- NAV -->
-        <nav class="nav" id="nav">
-            <a href="/" class="nav__logo">eg</a>
-            <button class="nav__burger" id="burger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav__links">
-                <li><a href="/#about" data-i18n="nav.about">about</a></li>
-                <li><a href="/#projects" data-i18n="nav.projects">projects</a></li>
-                <li><a href="/#contact" data-i18n="nav.contact">contact</a></li>
-                <li>
-                    <a
-                        href="/assets/cv-elisa.pdf"
-                        download
-                        data-i18n="nav.cv"
-                        >cv ↓</a
-                    >
-                </li>
-                <li>
-                    <button
-                        class="theme-toggle"
-                        id="theme-toggle"
-                        aria-label="Toggle theme">
-                        <span class="theme-toggle-icon">🌙</span>
-                    </button>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- MOBILE DRAWER -->
-        <div class="nav__drawer" id="drawer">
-            <div class="drawer-controls">
-                <button class="drawer-theme" id="theme-toggle-mobile" aria-label="Toggle theme">
-                    <span class="drawer-theme-label" data-i18n="nav.theme">theme</span>
-                    <span class="drawer-theme-icon">🌙</span>
-                </button>
-                <div class="drawer-lang">
-                    <button class="drawer-lang-toggle" id="lang-toggle-mobile" aria-label="Change language">
-                        <span class="drawer-lang-label" data-i18n="nav.language">language</span>
-                        <span class="drawer-lang-current">EN</span> <span class="drawer-lang-arrow">▾</span>
-                    </button>
-                    <ul class="drawer-lang-menu" id="lang-menu-mobile">
-                        <li data-lang="it" role="button">🇮🇹 <span>Italiano</span></li>
-                        <li data-lang="en" role="button">🇬🇧 <span>English</span></li>
-                        <li data-lang="fr" role="button">🇫🇷 <span>Français</span></li>
-                        <li data-lang="de" role="button">🇩🇪 <span>Deutsch</span></li>
-                        <li data-lang="es" role="button">🇪🇸 <span>Español</span></li>
-                        <li data-lang="ja" role="button">🇯🇵 <span>日本語</span></li>
-                    </ul>
-                </div>
-            </div>
-            <a href="/#about" onclick="closeDrawer()" data-i18n="nav.about"
-                >about</a
-            >
-            <a href="/#projects" onclick="closeDrawer()" data-i18n="nav.projects"
-                >projects</a
-            >
-            <a href="/#contact" onclick="closeDrawer()" data-i18n="nav.contact"
-                >contact</a
-            >
-            <a
-                href="/assets/cv-elisa.pdf"
-                download
-                onclick="closeDrawer()"
-                data-i18n="nav.cv"
-                >cv ↓</a
-            >
-        </div>
-
-        <!-- MAIN -->
-        <main class="projects-page">
-            <header class="projects__head r">
-                <div class="sec-tag" data-i18n="projects.title">02 // projects</div>
-                <h1 class="projects__title" data-i18n="projects.heading">
-                    Selected<br /><em>projects.</em>
-                </h1>
-                <p class="projects__sub" data-i18n="projects.sub">
-                    Pinned repositories, straight from GitHub.
-                </p>
-            </header>
-
-            <div id="projects-grid" class="projects-grid r">
-                <p class="projects-status">loading…</p>
-            </div>
-
-            <noscript>
-                <p class="projects-status">
-                    Enable JavaScript to load the pinned projects.
-                </p>
-            </noscript>
-        </main>
-
-        <!-- FOOTER -->
-        <footer>
-            <span data-i18n="footer.credit">Elisa Genesio · egenesio.com</span>
-            <span data-i18n="footer.copyright"
-                >© 2026 · all rights reserved</span
-            >
-        </footer>
-
-        <script src="/static/js/main.js"></script>
-        <script src="/static/js/lang.js"></script>
-        <script src="/static/js/projects.js"></script>
+        <p>Projects have moved to the <a href="/#projects">home page</a>.</p>
     </body>
 </html>

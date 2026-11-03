@@ -1,5 +1,5 @@
 /* ─── PINNED PROJECTS ──────────────────────────────────────
- * Renders the pinned GitHub repos on the projects page.
+ * Renders the pinned GitHub repos in the root page's projects section.
  *
  * Data flow:
  *   1. Immediately renders from the committed static JSON
@@ -13,8 +13,8 @@
     "https://gh-pinned-repos.egoist.sh/user?username=acrazypie";
   const GITHUB_OWNER = "acrazypie";
 
-  const grid = document.getElementById("projects-grid");
-  if (!grid) return;
+  const projectList = document.getElementById("projects-list");
+  if (!projectList) return;
 
   const STATUS_MESSAGES = {
     loading: "loading…",
@@ -66,37 +66,48 @@
 
   /* ─── rendering ───────────────────────────────────────── */
   function showStatus(message) {
-    grid.innerHTML = "";
-    const status = el("p", "projects-status", message);
-    grid.appendChild(status);
+    projectList.innerHTML = "";
+    projectList.appendChild(el("p", "project__desc", message));
   }
 
   function showError(message) {
-    grid.innerHTML = "";
-    const status = el("p", "projects-status", message);
-    const retry = el("button", "projects-retry", "↻");
+    projectList.innerHTML = "";
+    const status = el("p", "project__desc", message);
+    const retry = el("button", "project__retry", "↻");
     retry.type = "button";
     retry.addEventListener("click", () => {
       showStatus(STATUS_MESSAGES.loading);
       loadPins();
     });
-    grid.append(status, retry);
+    projectList.append(status, retry);
   }
 
-  function cardFor(repo) {
-    const card = el("article", "proj-card");
-    const repoLink = el("a", "proj-card__repo-link");
+  function projectFor(repo, index) {
+    const project = el("article", "project");
+    const repoLink = el("a", "project__repo-link");
     repoLink.href = repo.url;
     repoLink.target = "_blank";
     repoLink.rel = "noopener noreferrer";
     repoLink.setAttribute("aria-label", `View ${repo.name} on GitHub`);
 
-    const head = el("div", "proj-card__head");
-    const name = el("span", "proj-card__name", repo.name);
-    const actions = el("span", "proj-card__actions");
-    actions.appendChild(el("span", "proj-card__arrow", "↗"));
+    const meta = el("div", "project__meta");
+    meta.appendChild(
+      el("div", "project__num", String(index + 1).padStart(3, "0")),
+    );
+
+    const body = el("div", "project__body");
+    body.appendChild(el("div", "project__title", repo.name));
+    body.appendChild(
+      el("div", "project__desc", repo.description || "—"),
+    );
+    const langs = el("div", "project__langs");
+    if (repo.language) langs.appendChild(el("span", "lang", repo.language));
+    body.appendChild(langs);
+
+    const actions = el("div", "project__actions");
+    actions.appendChild(el("span", "project__arrow", "↗"));
     if (repo.homepage) {
-      const website = el("a", "proj-card__play", "▶");
+      const website = el("a", "project__play", "▶");
       website.href = repo.homepage;
       website.target = "_blank";
       website.rel = "noopener noreferrer";
@@ -104,25 +115,16 @@
       website.setAttribute("aria-label", `Visit ${repo.name} website`);
       actions.appendChild(website);
     }
-    head.append(name, actions);
 
-    const desc = el("p", "proj-card__desc", repo.description || "—");
-
-    const langs = el("div", "proj-card__langs");
-    if (repo.language) langs.appendChild(el("span", "lang", repo.language));
-
-    const foot = el("div", "proj-card__foot");
-    foot.appendChild(
-      el("span", "proj-card__repo", `github.com/${GITHUB_OWNER}/${repo.name}`),
-    );
-
-    card.append(repoLink, head, desc, langs, foot);
-    return card;
+    project.append(repoLink, meta, body, actions);
+    return project;
   }
 
   function render(repos) {
-    grid.innerHTML = "";
-    repos.forEach((repo) => grid.appendChild(cardFor(repo)));
+    projectList.innerHTML = "";
+    repos.forEach((repo, index) =>
+      projectList.appendChild(projectFor(repo, index)),
+    );
   }
 
   /* ─── data loading ────────────────────────────────────── */
