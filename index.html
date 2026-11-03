@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">  
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,21 @@
             name="description"
             content="Elisa Genesio — developer, builder of small things." />
         <title>Elisa Genesio</title>
+
+        <link
+            rel="icon"
+            type="image/png"
+            href="assets/icons/favicon-96x96.png"
+            sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+        <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/icons/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="egenesio" />
+        <link rel="manifest" href="assets/webmanifest/site.webmanifest" />
+
         <link
             href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
             rel="stylesheet" />
@@ -26,10 +41,7 @@
                 </li>
                 <li><a href="#contact" data-i18n="nav.contact">contact</a></li>
                 <li>
-                    <a
-                        href="assets/cv-elisa.pdf"
-                        download
-                        data-i18n="nav.cv"
+                    <a href="assets/cv-elisa.pdf" download data-i18n="nav.cv"
                         >cv ↓</a
                     >
                 </li>
@@ -47,22 +59,45 @@
         <!-- MOBILE DRAWER -->
         <div class="nav__drawer" id="drawer">
             <div class="drawer-controls">
-                <button class="drawer-theme" id="theme-toggle-mobile" aria-label="Toggle theme">
-                    <span class="drawer-theme-label" data-i18n="nav.theme">theme</span>
+                <button
+                    class="drawer-theme"
+                    id="theme-toggle-mobile"
+                    aria-label="Toggle theme">
+                    <span class="drawer-theme-label" data-i18n="nav.theme"
+                        >theme</span
+                    >
                     <span class="drawer-theme-icon">🌙</span>
                 </button>
                 <div class="drawer-lang">
-                    <button class="drawer-lang-toggle" id="lang-toggle-mobile" aria-label="Change language">
-                        <span class="drawer-lang-label" data-i18n="nav.language">language</span>
-                        <span class="drawer-lang-current">EN</span> <span class="drawer-lang-arrow">▾</span>
+                    <button
+                        class="drawer-lang-toggle"
+                        id="lang-toggle-mobile"
+                        aria-label="Change language">
+                        <span class="drawer-lang-label" data-i18n="nav.language"
+                            >language</span
+                        >
+                        <span class="drawer-lang-current">EN</span>
+                        <span class="drawer-lang-arrow">▾</span>
                     </button>
                     <ul class="drawer-lang-menu" id="lang-menu-mobile">
-                        <li data-lang="it" role="button">🇮🇹 <span>Italiano</span></li>
-                        <li data-lang="en" role="button">🇬🇧 <span>English</span></li>
-                        <li data-lang="fr" role="button">🇫🇷 <span>Français</span></li>
-                        <li data-lang="de" role="button">🇩🇪 <span>Deutsch</span></li>
-                        <li data-lang="es" role="button">🇪🇸 <span>Español</span></li>
-                        <li data-lang="ja" role="button">🇯🇵 <span>日本語</span></li>
+                        <li data-lang="it" role="button">
+                            🇮🇹 <span>Italiano</span>
+                        </li>
+                        <li data-lang="en" role="button">
+                            🇬🇧 <span>English</span>
+                        </li>
+                        <li data-lang="fr" role="button">
+                            🇫🇷 <span>Français</span>
+                        </li>
+                        <li data-lang="de" role="button">
+                            🇩🇪 <span>Deutsch</span>
+                        </li>
+                        <li data-lang="es" role="button">
+                            🇪🇸 <span>Español</span>
+                        </li>
+                        <li data-lang="ja" role="button">
+                            🇯🇵 <span>日本語</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -106,10 +141,7 @@
                     ><span data-i18n="hero.cta_github">github</span>
                     <span class="icon">↗</span></a
                 >
-                <a
-                    href="assets/cv-elisa.pdf"
-                    download
-                    class="cta-link"
+                <a href="assets/cv-elisa.pdf" download class="cta-link"
                     ><span data-i18n="hero.cta_cv">download cv</span>
                     <span class="icon">↓</span></a
                 >
@@ -384,10 +416,7 @@
                             >egenesi0 <span class="arr">↗</span></span
                         >
                     </a>
-                    <a
-                        href="assets/cv-elisa.pdf"
-                        download
-                        class="contact__row">
+                    <a href="assets/cv-elisa.pdf" download class="contact__row">
                         <span class="contact__label" data-i18n="contact.cv"
                             >Curriculum Vitae</span
                         >
