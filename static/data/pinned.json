@@ -1,6 +1,6 @@
 {
   "owner": "acrazypie",
-  "generated_at": "2026-11-02T14:14:22.037Z",
+  "generated_at": "2026-11-09T14:42:40.721Z",
   "source": "github-profile-scrape",
   "repos": [
     {
@@ -17,19 +17,6 @@
         "stenography"
       ],
       "stars": 1
-    },
-    {
-      "name": "sudoku-flask",
-      "full_name": "acrazypie/sudoku-flask",
-      "description": "sudoku, but fancy!",
-      "language": "Python",
-      "homepage": "",
-      "url": "https://github.com/acrazypie/sudoku-flask",
-      "topics": [
-        "fancy",
-        "sudoku"
-      ],
-      "stars": 0
     },
     {
       "name": "color-game",
@@ -52,20 +39,8 @@
       "language": "TypeScript",
       "homepage": "https://slate-theta-drab.vercel.app",
       "url": "https://github.com/acrazypie/slate",
-      "topics": [],
-      "stars": 0
-    },
-    {
-      "name": "portfolio",
-      "full_name": "acrazypie/portfolio",
-      "description": "My site/portfolio. Take a look!",
-      "language": "HTML",
-      "homepage": "https://egenesio.com/",
-      "url": "https://github.com/acrazypie/portfolio",
       "topics": [
-        "css3",
-        "html5",
-        "javascript"
+        "aigenerated"
       ],
       "stars": 0
     },
@@ -82,6 +57,32 @@
         "sudoku",
         "sudoku-generator",
         "sudoku-solver"
+      ],
+      "stars": 0
+    },
+    {
+      "name": "palette_generator",
+      "full_name": "acrazypie/palette_generator",
+      "description": "A web application for generating color palettes dynamically.",
+      "language": "Python",
+      "homepage": "",
+      "url": "https://github.com/acrazypie/palette_generator",
+      "topics": [
+        "docker",
+        "flask-application",
+        "html-css-javascript"
+      ],
+      "stars": 0
+    },
+    {
+      "name": "sudoku-game",
+      "full_name": "acrazypie/sudoku-game",
+      "description": "sudoku game, yay!",
+      "language": "JavaScript",
+      "homepage": "https://sudoku.egenesio.com/",
+      "url": "https://github.com/acrazypie/sudoku-game",
+      "topics": [
+        "sudoku-game"
       ],
       "stars": 0
     }
