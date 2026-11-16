@@ -1,6 +1,6 @@
 {
   "owner": "acrazypie",
-  "generated_at": "2026-11-09T14:42:40.721Z",
+  "generated_at": "2026-11-16T14:18:48.142Z",
   "source": "github-profile-scrape",
   "repos": [
     {
@@ -37,11 +37,9 @@
       "full_name": "acrazypie/slate",
       "description": "Pianificatore a blocchi orari per studenti, universitari e giovani lavoratori.",
       "language": "TypeScript",
-      "homepage": "https://slate-theta-drab.vercel.app",
+      "homepage": "https://slate.egenesio.com",
       "url": "https://github.com/acrazypie/slate",
-      "topics": [
-        "aigenerated"
-      ],
+      "topics": [],
       "stars": 0
     },
     {
