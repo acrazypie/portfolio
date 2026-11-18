@@ -198,7 +198,14 @@ a {
 }
 
 .drawer-theme-icon {
-    font-size: 1.2rem;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+}
+
+.drawer-theme-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .drawer-lang {
@@ -395,15 +402,30 @@ a {
 }
 
 .theme-toggle-icon {
-    display: inline-block;
+    display: inline-flex;
     width: 16px;
     height: 16px;
-    font-size: 1rem;
-    transition: transform 0.3s var(--ease);
 }
 
-.theme-toggle:hover .theme-toggle-icon {
-    transform: rotate(180deg);
+/* show the moon in dark mode, the sun in light mode */
+.icon-sun,
+[data-theme="light"] .icon-moon {
+    display: none;
+}
+
+[data-theme="light"] .icon-sun {
+    display: block;
+}
+
+/* full-screen circle reveal when switching theme (View Transitions API) */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+    z-index: 2;
 }
 
 /* ─── HERO ───────────────────────────────────────────────── */

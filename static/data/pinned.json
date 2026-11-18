@@ -1,6 +1,6 @@
 {
   "owner": "acrazypie",
-  "generated_at": "2026-11-16T14:18:48.142Z",
+  "generated_at": "2026-11-18T16:01:34.188Z",
   "source": "github-profile-scrape",
   "repos": [
     {
@@ -43,22 +43,6 @@
       "stars": 0
     },
     {
-      "name": "sudoku.js",
-      "full_name": "acrazypie/sudoku.js",
-      "description": "A Sudoku puzzle generator and solver JavaScript library.",
-      "language": "JavaScript",
-      "homepage": "https://npmjs.com/package/@acrazypie/sudoku.js",
-      "url": "https://github.com/acrazypie/sudoku.js",
-      "topics": [
-        "javascript",
-        "library",
-        "sudoku",
-        "sudoku-generator",
-        "sudoku-solver"
-      ],
-      "stars": 0
-    },
-    {
       "name": "palette_generator",
       "full_name": "acrazypie/palette_generator",
       "description": "A web application for generating color palettes dynamically.",
@@ -82,6 +66,16 @@
       "topics": [
         "sudoku-game"
       ],
+      "stars": 0
+    },
+    {
+      "name": "music_library",
+      "full_name": "acrazypie/music_library",
+      "description": "",
+      "language": "Python",
+      "homepage": "",
+      "url": "https://github.com/acrazypie/music_library",
+      "topics": [],
       "stars": 0
     }
   ]

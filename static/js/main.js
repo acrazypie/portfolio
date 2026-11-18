@@ -29,28 +29,55 @@ function closeDrawer() {
 function initializeTheme() {
     const savedTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.setAttribute("data-theme", savedTheme);
-    updateThemeIcon(savedTheme);
 }
 
-function updateThemeIcon(theme) {
-    const themeToggle = document.getElementById("theme-toggle");
-    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
-    const icon = theme === "dark" ? "🌙" : "☀️";
-    if (themeToggle) {
-        themeToggle.querySelector(".theme-toggle-icon").textContent = icon;
-    }
-    if (themeToggleMobile) {
-        themeToggleMobile.querySelector(".drawer-theme-icon").textContent = icon;
-    }
+function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
 }
 
-function toggleTheme() {
+function toggleTheme(event) {
     const currentTheme =
         document.documentElement.getAttribute("data-theme") || "dark";
     const newTheme = currentTheme === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-    updateThemeIcon(newTheme);
+
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+    ).matches;
+    if (!document.startViewTransition || reduceMotion) {
+        applyTheme(newTheme);
+        return;
+    }
+
+    // Expand a circle from the click point (or the button's centre for
+    // keyboard activation) until it covers the whole viewport.
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX || rect.left + rect.width / 2;
+    const y = event.clientY || rect.top + rect.height / 2;
+    const radius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y),
+    );
+
+    const transition = document.startViewTransition(() => applyTheme(newTheme));
+    transition.ready
+        .then(() => {
+            document.documentElement.animate(
+                {
+                    clipPath: [
+                        `circle(0px at ${x}px ${y}px)`,
+                        `circle(${radius}px at ${x}px ${y}px)`,
+                    ],
+                },
+                {
+                    duration: 600,
+                    easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+                    pseudoElement: "::view-transition-new(root)",
+                },
+            );
+        })
+        // A rapid second click skips the running transition; that's fine.
+        .catch(() => {});
 }
 
 /* ─── MOBILE LANGUAGE SELECTOR ─────────────────────────────── */
