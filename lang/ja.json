@@ -2,7 +2,6 @@
     "nav.about": "について",
     "nav.projects": "プロジェクト",
     "nav.contact": "連絡先",
-    "nav.cv": "cv",
     "nav.theme": "テーマ",
     "nav.language": "言語",
 
@@ -10,7 +9,6 @@
     "hero.desc": "小さなものを作る人。<br>常に的好奇心旺盛で、常にカフェイン摂取。",
     "hero.cta_projects": "プロジェクト",
     "hero.cta_github": "github",
-    "hero.cta_cv": "履歴書をダウンロード",
     "hero.scroll": "スクロール",
 
     "about.title": "01 // について",
@@ -31,8 +29,6 @@
     "contact.email": "メール",
     "contact.instagram": "Instagram",
     "contact.kofi": "Ko-fi",
-    "contact.cv": "履歴書",
-    "contact.cv_action": "PDFをダウンロード",
 
     "cont-title": "EG | 連絡先",
     "contacts.heading": "連絡先<br><em>コンタクト。</em>",

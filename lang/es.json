@@ -2,7 +2,6 @@
     "nav.about": "sobre",
     "nav.projects": "proyectos",
     "nav.contact": "contacto",
-    "nav.cv": "cv",
     "nav.theme": "tema",
     "nav.language": "idioma",
 
@@ -10,7 +9,6 @@
     "hero.desc": "Constructora de cosas pequeñas.<br>Siempre curiosa, siempre cafeinada.",
     "hero.cta_projects": "proyectos",
     "hero.cta_github": "github",
-    "hero.cta_cv": "descargar cv",
     "hero.scroll": "desplazar",
 
     "about.title": "01 // sobre",
@@ -31,8 +29,6 @@
     "contact.email": "Correo",
     "contact.instagram": "Instagram",
     "contact.kofi": "Ko-fi",
-    "contact.cv": "Currículum",
-    "contact.cv_action": "descargar PDF",
 
     "cont-title": "EG | Contacto",
     "contacts.heading": "Contacta<br><em>conmigo.</em>",
