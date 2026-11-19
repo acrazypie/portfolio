@@ -19,6 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
     window.applyLanguage = applyLanguage;
 });
 
+// Translate elements added after the language loaded (e.g. project cards).
+window.translateElement = (root) => {
+    if (currentTranslations) applyTranslations(currentTranslations, root);
+};
+
 function getDefaultLanguage() {
     const browserLang = navigator.language.split("-")[0];
     return LANGUAGES.hasOwnProperty(browserLang) ? browserLang : "en";
@@ -113,8 +118,11 @@ function applyLanguage(lang) {
 }
 
 // --- Apply text to all elements with [data-i18n] ---
-function applyTranslations(translations) {
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
+let currentTranslations = null;
+
+function applyTranslations(translations, root = document) {
+    currentTranslations = translations;
+    root.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
         if (translations[key]) {
             if (el.tagName === "INPUT" && el.placeholder !== undefined) {

@@ -13,6 +13,12 @@
     "https://gh-pinned-repos.egoist.sh/user?username=acrazypie";
   const GITHUB_OWNER = "acrazypie";
 
+  /* Repos with a case study page on this site. Add an entry here
+     (and a projects/<name>/index.html page) to link a new one. */
+  const CASE_STUDIES = {
+    wayl: "/projects/wayl",
+  };
+
   const projectList = document.getElementById("projects-list");
   if (!projectList) return;
 
@@ -105,6 +111,17 @@
     body.appendChild(langs);
 
     const actions = el("div", "project__actions");
+    const caseStudy = CASE_STUDIES[repo.name.toLowerCase()];
+    if (caseStudy) {
+      project.classList.add("project--case");
+      const link = el("a", "project__case");
+      link.href = caseStudy;
+      link.setAttribute("aria-label", `Read the ${repo.name} case study`);
+      const label = el("span", "", "case study");
+      label.setAttribute("data-i18n", "projects.case_study");
+      link.append(label, el("span", "project__case-arrow", "→"));
+      actions.appendChild(link);
+    }
     actions.appendChild(el("span", "project__arrow", "↗"));
     if (repo.homepage) {
       const website = el("a", "project__play", "▶");
@@ -125,6 +142,8 @@
     repos.forEach((repo, index) =>
       projectList.appendChild(projectFor(repo, index)),
     );
+    // Cards can render after the language file loaded: translate them too.
+    if (window.translateElement) window.translateElement(projectList);
   }
 
   /* ─── data loading ────────────────────────────────────── */
