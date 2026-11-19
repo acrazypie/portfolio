@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="wayl-t1">
+  <title id="wayl-t1">WAYL</title>
+  <style>.v{fill:#6d28d9}.s{stroke:#6d28d9}@media (prefers-color-scheme:dark){.v{fill:#a78bfa}.s{stroke:#a78bfa}}</style>
+  <defs>
+    <mask id="wayl-m1" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64">
+      <rect width="64" height="64" fill="#fff"/>
+      <g fill="#000">
+        <rect x="13" y="22" width="7" height="12" rx="3.5"/>
+        <rect x="23.5" y="14" width="7" height="28" rx="3.5"/>
+        <rect x="34" y="18" width="7" height="20" rx="3.5"/>
+        <circle cx="48" cy="28" r="3.5"/>
+      </g>
+    </mask>
+  </defs>
+  <path mask="url(#wayl-m1)" class="v" d="M18 4h28a14 14 0 0 1 14 14v20a14 14 0 0 1-14 14H26l-11.5 9.2A1.6 1.6 0 0 1 12 59.9V51.3A14 14 0 0 1 4 38V18A14 14 0 0 1 18 4z"/>
+</svg>

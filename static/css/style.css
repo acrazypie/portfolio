@@ -764,6 +764,54 @@ a {
     transform: scale(0.96);
 }
 
+.project__case {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    height: 2.75rem;
+    padding: 0 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    color: var(--green);
+    white-space: nowrap;
+    transition:
+        color 0.2s,
+        border-color 0.2s,
+        background 0.2s;
+}
+
+/* mobile: a card with a case study link puts its actions on their own row
+   (the ≥768px .project rule below restores the 3-column layout) */
+.project--case {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.project--case .project__actions {
+    margin-top: 1rem;
+}
+
+.project__case-arrow {
+    transition: transform 0.25s var(--ease);
+}
+
+.project__case:hover,
+.project__case:focus-visible {
+    border-color: var(--line-hi);
+    background: rgba(74, 222, 128, 0.08);
+    color: var(--white);
+}
+
+.project__case:hover .project__case-arrow {
+    transform: translateX(3px);
+}
+
+.project__case:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+}
+
 .project__repo-link {
     position: absolute;
     z-index: 1;
@@ -1041,6 +1089,10 @@ footer span:first-child {
         grid-template-columns: 100px minmax(0, 1fr) auto;
         align-items: center;
         padding: 1.8rem 0;
+    }
+
+    .project--case .project__actions {
+        margin-top: 0;
     }
 
     .project__meta {
