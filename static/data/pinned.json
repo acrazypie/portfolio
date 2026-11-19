@@ -1,6 +1,6 @@
 {
   "owner": "acrazypie",
-  "generated_at": "2026-11-18T16:01:34.188Z",
+  "generated_at": "2026-11-19T16:40:24.488Z",
   "source": "github-profile-scrape",
   "repos": [
     {
@@ -22,7 +22,7 @@
       "name": "color-game",
       "full_name": "acrazypie/color-game",
       "description": "A fun and simple javascript game",
-      "language": "HTML",
+      "language": "CSS",
       "homepage": "https://colorgame.egenesio.com/",
       "url": "https://github.com/acrazypie/color-game",
       "topics": [
@@ -43,20 +43,6 @@
       "stars": 0
     },
     {
-      "name": "palette_generator",
-      "full_name": "acrazypie/palette_generator",
-      "description": "A web application for generating color palettes dynamically.",
-      "language": "Python",
-      "homepage": "",
-      "url": "https://github.com/acrazypie/palette_generator",
-      "topics": [
-        "docker",
-        "flask-application",
-        "html-css-javascript"
-      ],
-      "stars": 0
-    },
-    {
       "name": "sudoku-game",
       "full_name": "acrazypie/sudoku-game",
       "description": "sudoku game, yay!",
@@ -69,13 +55,32 @@
       "stars": 0
     },
     {
-      "name": "music_library",
-      "full_name": "acrazypie/music_library",
-      "description": "",
+      "name": "wayl",
+      "full_name": "acrazypie/wayl",
+      "description": "A small social music log.",
       "language": "Python",
-      "homepage": "",
-      "url": "https://github.com/acrazypie/music_library",
-      "topics": [],
+      "homepage": "http://getwayl.com/",
+      "url": "https://github.com/acrazypie/wayl",
+      "topics": [
+        "music",
+        "navidrome",
+        "plex",
+        "self-hosted"
+      ],
+      "stars": 0
+    },
+    {
+      "name": "colorPaletteGenerator",
+      "full_name": "acrazypie/colorPaletteGenerator",
+      "description": "A color palette generator made with Javascrpt.",
+      "language": "JavaScript",
+      "homepage": "https://palette.egenesio.com/",
+      "url": "https://github.com/acrazypie/colorPaletteGenerator",
+      "topics": [
+        "css3",
+        "html5",
+        "javascript"
+      ],
       "stars": 0
     }
   ]
